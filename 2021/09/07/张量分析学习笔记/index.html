@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>张量分析学习笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="那么这里是张量分析张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量待施工">
+  <meta name="description" content="那么这里是张量分析张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。  矢量的基本知识三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。 矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3矢量的全体对矢量和封闭，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="张量分析学习笔记">
 <meta property="og:url" content="http://example.com/2021/09/07/%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="那么这里是张量分析张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量待施工">
+<meta property="og:description" content="那么这里是张量分析张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。  矢量的基本知识三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。 矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3矢量的全体对矢量和封闭，">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-07T07:38:14.000Z">
-<meta property="article:modified_time" content="2021-09-07T09:23:34.357Z">
+<meta property="article:modified_time" content="2021-09-07T16:40:24.039Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Differential Geometry">
 <meta name="twitter:card" content="summary">
@@ -176,7 +176,17 @@
         <h3 id="那么这里是张量分析"><a href="#那么这里是张量分析" class="headerlink" title="那么这里是张量分析"></a>那么这里是张量分析</h3><p>张量，tensor，重要分析工具，不可不品尝。</p>
 <p>不多说，开干！</p>
 <hr>
-<h3 id="（一）什么是张量"><a href="#（一）什么是张量" class="headerlink" title="（一）什么是张量"></a>（一）什么是张量</h3><p>待施工</p>
+<h3 id="（一）什么是张量"><a href="#（一）什么是张量" class="headerlink" title="（一）什么是张量"></a>（一）什么是张量</h3><p>张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。</p>
+<hr>
+<h4 id="矢量的基本知识"><a href="#矢量的基本知识" class="headerlink" title="矢量的基本知识"></a>矢量的基本知识</h4><p>三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。</p>
+<p>矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3矢量的全体对矢量和封闭，零矢量定义为大小为0方向任意的矢量。这是说，矢量对和构成交换环。</p>
+<p>矢量的数乘按照矢量的倍数和定义，且满足分配律。</p>
+<p>矢量空间具有封闭性，这是说矢量空间中任意矢量的线性组合依然是该空间中的矢量。</p>
+<p>一个矢量空间中最大线性无关矢量组所包含的矢量数称为该矢量空间的维数，包含维数个线性无关矢量的矢量组可以作为该空间的一组基底，这是说任意该空间中的矢量均可以表达为这组矢量的线性组合。</p>
+<p>矢量的点积是指矢量模与其夹角余弦之积，结果为实数，满足交换律、分配律、正定性和施瓦茨不等式。矢量的叉积的结果是矢量，该矢量与两运算矢量所在平面垂直，按照坐标系的定向来定向。叉积满足反交换律、分配律，不满足结合律。二重叉积满足<br>$$<br>u \times (v \times w) = (u\cdot w)v-(u\cdot v)w<br>$$</p>
+<p>由此可见，叉积不满足结合律。</p>
+<p>矢量的混合积是指<br>$$<br>\begin{align}<br>[u; v; w]&amp;=(u\times v)\cdot w=u\cdot (v\times w)\<br>&amp;=\begin{bmatrix}<br>u_{x}&amp;u_{y}&amp;u_{z}\<br>v_{x}&amp;v_{y}&amp;v_{z}\<br>w_{x}&amp;w_{y}&amp;w_{z}<br>\end{bmatrix}<br>=\begin{bmatrix}<br>u_{x}&amp;v_{x}&amp;w_{x}\<br>u_{y}&amp;v_{y}&amp;w_{y}\<br>u_{z}&amp;v_{z}&amp;w_{z}<br>\end{bmatrix}<br>\end{align}<br>$$<br>混合积换序应满足<br>$$<br>\begin{align}<br>[u; v; w]&amp;=[v; w; u]=[w; u; v]\&amp;=-[v; u; w]=-[u; w; v]=-[w; v; u]<br>\end{align}<br>$$<br>在线性代数中我们已经了解，混合积的意义是以u、v、w三个矢量为棱边的平行六面体的体积，上式还说明了u、v、w构成右手系时体积为正。</p>
+<p>由上式易知：<br>$$<br>[u; v; w][u’; v’; w’]=\begin{bmatrix}<br>u\cdot u’&amp;u\cdot v’&amp;u\cdot w’\<br>v\cdot u’&amp;v\cdot v’&amp;v\cdot w’\<br>w\cdot u’&amp;w\cdot v’&amp;w\cdot w’<br>\end{bmatrix}<br>$$</p>
 
       
 
