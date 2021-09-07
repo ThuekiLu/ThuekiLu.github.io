@@ -187,11 +187,35 @@
 <p>矢量的数乘按照矢量的倍数和定义，且满足分配律。</p>
 <p>矢量空间具有封闭性，这是说矢量空间中任意矢量的线性组合依然是该空间中的矢量。</p>
 <p>一个矢量空间中最大线性无关矢量组所包含的矢量数称为该矢量空间的维数，包含维数个线性无关矢量的矢量组可以作为该空间的一组基底，这是说任意该空间中的矢量均可以表达为这组矢量的线性组合。</p>
-<p>矢量的点积是指矢量模与其夹角余弦之积，结果为实数，满足交换律、分配律、正定性和施瓦茨不等式。矢量的叉积的结果是矢量，该矢量与两运算矢量所在平面垂直，按照坐标系的定向来定向。叉积满足反交换律、分配律，不满足结合律。二重叉积满足<br>$$<br>u \times (v \times w) = (u\cdot w)v-(u\cdot v)w<br>$$</p>
-<p>由此可见，叉积不满足结合律。</p>
-<p>矢量的混合积是指<br>$$<br>\begin{align}<br>[u; v; w]&amp;=(u\times v)\cdot w=u\cdot (v\times w)\<br>&amp;=\begin{bmatrix}<br>u_{x}&amp;u_{y}&amp;u_{z}\<br>v_{x}&amp;v_{y}&amp;v_{z}\<br>w_{x}&amp;w_{y}&amp;w_{z}<br>\end{bmatrix}<br>=\begin{bmatrix}<br>u_{x}&amp;v_{x}&amp;w_{x}\<br>u_{y}&amp;v_{y}&amp;w_{y}\<br>u_{z}&amp;v_{z}&amp;w_{z}<br>\end{bmatrix}<br>\end{align}<br>$$<br>混合积换序应满足<br>$$<br>\begin{align}<br>[u; v; w]&amp;=[v; w; u]=[w; u; v]\&amp;=-[v; u; w]=-[u; w; v]=-[w; v; u]<br>\end{align}<br>$$<br>在线性代数中我们已经了解，混合积的意义是以u、v、w三个矢量为棱边的平行六面体的体积，上式还说明了u、v、w构成右手系时体积为正。</p>
-<p>由上式易知：<br>$$<br>[u; v; w][u’; v’; w’]=\begin{bmatrix}<br>u\cdot u’&amp;u\cdot v’&amp;u\cdot w’\<br>v\cdot u’&amp;v\cdot v’&amp;v\cdot w’\<br>w\cdot u’&amp;w\cdot v’&amp;w\cdot w’<br>\end{bmatrix}<br>$$</p>
-
+<p>矢量的点积是指矢量模与其夹角余弦之积，结果为实数，满足交换律、分配律、正定性和施瓦茨不等式。矢量的叉积的结果是矢量，该矢量与两运算矢量所在平面垂直，按照坐标系的定向来定向。叉积满足反交换律、分配律，不满足结合律。二重叉积满足</p>
+<script type="math/tex; mode=display">
+u \times (v \times w) = (u\cdot w)v-(u\cdot v)w</script><p>由此可见，叉积不满足结合律。</p>
+<p>矢量的混合积是指</p>
+<script type="math/tex; mode=display">
+\begin{align}
+[u\; v\; w]&=(u\times v)\cdot w=u\cdot (v\times w)\\
+&=\begin{bmatrix}
+u_{x}&u_{y}&u_{z}\\
+v_{x}&v_{y}&v_{z}\\
+w_{x}&w_{y}&w_{z}
+\end{bmatrix}
+=\begin{bmatrix}
+u_{x}&v_{x}&w_{x}\\
+u_{y}&v_{y}&w_{y}\\
+u_{z}&v_{z}&w_{z}
+\end{bmatrix}
+\end{align}</script><p>混合积换序应满足</p>
+<script type="math/tex; mode=display">
+\begin{align}
+[u\; v\; w]&=[v\; w\; u]=[w\; u\; v]\\&=-[v\; u\; w]=-[u\; w\; v]=-[w\; v\; u]
+\end{align}</script><p>在线性代数中我们已经了解，混合积的意义是以u、v、w三个矢量为棱边的平行六面体的体积，上式还说明了u、v、w构成右手系时体积为正。</p>
+<p>由上式易知：</p>
+<script type="math/tex; mode=display">
+[u\; v\; w][u'\; v'\; w']=\begin{bmatrix}
+u\cdot u'&u\cdot v'&u\cdot w'\\
+v\cdot u'&v\cdot v'&v\cdot w'\\
+w\cdot u'&w\cdot v'&w\cdot w'
+\end{bmatrix}</script>
       
 
       
