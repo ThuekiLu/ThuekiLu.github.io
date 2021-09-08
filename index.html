@@ -212,7 +212,25 @@ u_{z}&v_{z}&w_{z}
 u\cdot u'&u\cdot v'&u\cdot w'\\
 v\cdot u'&v\cdot v'&v\cdot w'\\
 w\cdot u'&w\cdot v'&w\cdot w'
-\end{bmatrix}</script>
+\end{bmatrix}</script><hr>
+<p>回顾完矢量，我们再说坐标系。我们从微积分初步里面可以了解到，坐标系永远不是本质的，只能在某种程度上作为方便我们研究的参照。由此可见，只具有正交坐标轴的笛卡尔坐标系远远不能满足我们日益复杂的参照需求。那么我们从矢量基底的角度来研究一下坐标系。</p>
+<hr>
+<h3 id="斜角直线坐标系"><a href="#斜角直线坐标系" class="headerlink" title="斜角直线坐标系"></a>斜角直线坐标系</h3><p>取平面内的两直线$x^{1}$,$x^{2}$,坐标线互不相交且夹角为$\phi$。若选用沿$x^{1}$与$x^{2}$坐标线的参考矢量$\textbf{g}_{1}$与$\textbf{g}_{2}$(他们可以不是单位矢量)，则任意矢量P可以表示为：</p>
+<script type="math/tex; mode=display">
+\textbf{P} =P^{1}\textbf{g}_{1}+P^{2}\textbf{g}_{2}=\Sigma^{2}_{\alpha =1}P^{\alpha}\textbf{g}_{\alpha}=P^{\alpha}\textbf{g}_{\alpha}</script><p>此处约定俗成地使用了爱因斯坦求和约定，$\alpha$称为哑指标，满足以下规则：</p>
+<h5 id="哑指标求和规则："><a href="#哑指标求和规则：" class="headerlink" title="哑指标求和规则："></a>哑指标求和规则：</h5><p>（1）在同一项中，同一个字母以上标和下标成对出现，表示按照该指标遍历求和。</p>
+<p>（2）哑指标为黏附变元，本身并无意义，只有用作求和时才有标记的意义。亦即求和结果与哑指标选取无关。</p>
+<p>当选定参考基矢量之后，可以用初等代数的方法来确定任意矢量P的分矢量$P^{1}$,$P^{2}$。设引入$x^{1}$,$x^{2}$的单位矢量为i1、i2，则有</p>
+<script type="math/tex; mode=display">
+i_{1}\cdot i_{1}=i_{2}\cdot i_{2}=1\\
+i_{1}\cdot i_{2}=i_{2}\cdot i_{1}=0\\
+\textbf{g}_{1}=g_{1}i_{1},\textbf{g}_{2}=g_{2}i_{2}</script><p>与笛卡尔坐标系不同，因为$g_{1}$,$g_{2}$矢量不为单位矢量且不正交，故矢量P在$\textbf{g}_{\alpha}$上的投影不等于它的分量：</p>
+<script type="math/tex; mode=display">
+P\cdot i_{1}=P^{1}\abs{\textbf{g}_{1}} +P^{2}\abs{\textbf{g}_{2}}\cos{\phi}\\
+P\cdot i_{2}=P^{1}\abs{\textbf{g}_{1}}\cos{\phi} +P^{2}\abs{\textbf{g}_{2}}</script><p>这样表述P的分量的方法需要通过联立解以上代数方程来计算，这非常不方便，因而为求能够方便的表示分量，我们引入一对与$\textbf{g}_{\alpha}$对偶的参考矢量$\textbf{g}^{\alpha}$，满足：</p>
+<script type="math/tex; mode=display">
+\textbf{g}^{1}\cdot \textbf{g}_{2}=\textbf{g}^{2}\cdot \textbf{g}_{1}=0\\
+\textbf{g}^{1}\cdot \textbf{g}_{1}=\textbf{g}^{2}\cdot \textbf{g}_{2}=0</script>
       
 
       
