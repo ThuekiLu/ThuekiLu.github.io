@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://example.com/2021/09/07/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/6c1e9fc87e9b8793b776f9e26b6c95b4-16310084683645.svg">
 <meta property="og:image" content="http://example.com/2021/09/07/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/381772b025ea819b113200b5d224872a.svg">
 <meta property="article:published_time" content="2021-09-07T07:37:52.000Z">
-<meta property="article:modified_time" content="2021-09-07T09:57:21.236Z">
+<meta property="article:modified_time" content="2021-09-10T13:28:13.996Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Functions of Complex">
 <meta name="twitter:card" content="summary">
@@ -189,7 +189,47 @@
 <p>​    《复变函数论方法》是苏联数学家拉夫连季耶夫的讲义，个中理论事无巨细一并列载，是一本内容丰富但难啃的大部头。这本书以共形映射为基础，详细地介绍了将共形映射应用到共形映射的一般问题上去的方法，同时也介绍了一些复变函数逼近理论、保角映射理论、分析理论、算子论等方法。</p>
 <p>​    那么，要开始了。</p>
 <hr>
-<h3 id="（一）复数的基本知识"><a href="#（一）复数的基本知识" class="headerlink" title="（一）复数的基本知识"></a>（一）复数的基本知识</h3><p>待施工</p>
+<h3 id="（一）复数的基本知识"><a href="#（一）复数的基本知识" class="headerlink" title="（一）复数的基本知识"></a>（一）复数的基本知识</h3><p>形如$x+\textbf{i}y$形状的数叫做复数，其中x和y都是实数，而i是一个新引入的常量，叫做虚数单位。x与y两个数分别被称为复数的实部和虚部，用记号Re和Im表示。</p>
+<p>特别的，x=0时，复数叫做纯虚数，y=0时，复数与实数等同。</p>
+<p>复数具有良好的相等关系，即两复数实部虚部均相等时，两复数相等。</p>
+<p>复数具有定义良好的运算。</p>
+<p>复数的加法定义为实部与实部相加，虚部与虚部相加，复数的减法定义为加法的逆。</p>
+<p>两复数被称为共轭的，这是说两复数具有相同的实部和互为相反数的虚部。$z_{1}$的共轭复数记作$\overline{z_{1}}$。</p>
+<p>由此可见，复数对加法构成交换环，此处复数事实上同构于R$\times$R了。</p>
+<p>对于虚数单位$\textbf{i}$我们定义它的乘法运算$\textbf{i} \cdot  \textbf{i}$= -1，这是说，虚数单位是方程$x^{2}$+1=0的解的扩张。</p>
+<p>此时我们可以构造复数的乘法和除法了，只介绍乘法原则：</p>
+<script type="math/tex; mode=display">
+z_{1}z_{2}=x_{1}x_{2}-y_{1}y_{2}+(x_{2}y_{1}+x_{1}y_{2})\textbf{i}</script><p>复数的模定义为其与其共轭数的自乘的平方根，此数是非负的，满足我们对复数“度量”的要求。</p>
+<p>下面来介绍复数的整次乘幂：</p>
+<p>n个相等的数相乘叫这个数的n次乘幂。其逆运算，方根，规定如下：</p>
+<p>如果$\omega^{n}$=z那么$\omega$叫做z的n次方根。下面我们将看到，任何一个非0复数的n次方根总有n个不同的值。</p>
+<h4 id="复数的几何表示"><a href="#复数的几何表示" class="headerlink" title="复数的几何表示"></a>复数的几何表示</h4><p>我们考虑笛卡尔坐标平面xOy，并用坐标为（x，y）的点表示复数z=x+iy。那么我们容易看到，实平面上的点和复数一一对应起来了。</p>
+<p>我们考虑平面向量与平面间的对应关系，容易想到每个向量也都唯一地对应着一个复数，这样我们在几何直观上的复数观念就建立起来了。</p>
+<p>同时，复数在极坐标内的表示法也是我们常用的。如果把极径记作r，辐角记作$\phi$,那么就有z=r($ \cos {\phi}+\sin {\phi}$)</p>
+<p>可以验证的是，r就是复数的模，因而肯定了我们用模度量复数的想法。极角$\phi$叫做复数z的辐角，用记号Arg z来表示。复数的模是唯一确定的，但是辐角却对应无数多个相差2$\pi$的值（z≠0）。</p>
+<script type="math/tex; mode=display">
+\phi = Arg \; z =\begin{cases}
+arctg \frac{y}{x}+2k\pi &\text{第一四象限}\\
+arctg \frac{y}{x}+(2k+1)\pi &\text{第二三象限}
+\end{cases}</script><p>这里用arctg表示Arctg的主值，即大于$-\pi/2$小于$\pi/2$的值，k为任意整数。</p>
+<p>从上一节运算法则中我们可以得出，两个复数相乘时，辐角相加，模数相乘。两个复数相除时，我们须得说明复数的倒数的几何意义：</p>
+<p>首先假定复数z的模小于1.从原点O作Oz，过z作Oz的垂线交圆周r=1于一点A，过这点A作圆周的切线，这切线于Oz射线的交点记作$\omega$，显然有arg $\omega$ = arg z.</p>
+<p>由直角三角形的相似性，我们可以得出$|\omega| \cdot |z|$=1，然而这二者辐角相等，故只需作前者关于x轴的对称点，该点于z相乘辐角才可归0，模长才可为1，这样，我们就找到了z的倒数的几何表示。</p>
+<p>熟悉几何学的都能明白，这个点实际上就是经过反演变换和对称变换后的z，反演变换是“圆对称”，也可以看作是对称操作而来。</p>
+<p>乘幂的几何意义，以上说的已经很明白，关于求z的n次方根，我们可以清楚的看到这些根是模长为z的模长的n次方根，辐角为z的1/n的整数倍的一些值。有趣的是，这些根可以恰好构成一个n边形的n个顶点。</p>
+<h3 id="复变函数的基本知识"><a href="#复变函数的基本知识" class="headerlink" title="复变函数的基本知识"></a>复变函数的基本知识</h3><p>在这一节中我们要介绍复变函数的基本知识和柯西-黎曼条件。</p>
+<h5 id="几何概念"><a href="#几何概念" class="headerlink" title="几何概念"></a>几何概念</h5><p>复平面上的区域是一个点集，满足开集性和连通性。</p>
+<p>凡是本身不属于区域D，而在它本身的任意邻域内都含有D中的点的点叫做D的边界点，D的所有边界点的集合叫做它的边界。区域D同它的边界合在一起叫做闭区域。</p>
+<p>我们假定一个区域的边界将总是由有限多的闭曲线、截痕与点组成的，而且组成边界的那些曲线与截痕，我们总假定是逐段光滑的。一个区域的边界被分成若干连接部分，这些部分的数目，叫做这个区域的连通阶数。如果D的边界是完全由一个连接部分构成，那么D叫做单连通区域。</p>
+<p>区域边界的正向将被规定为使这区域保持在左边那个方向。按照正向沿着边界走，边界的某些点将只被经过一次，另外一些点将被经过数次。一个点被经历过的次数叫做它的重数。</p>
+<h5 id="复变函数"><a href="#复变函数" class="headerlink" title="复变函数"></a>复变函数</h5><p>在z平面上点的一个集合M，如果已经指明一个规则，对应这个规则，M的每一个点z都有一个或一些确定的点w的总和与之对应，那么我们就说M上指定了一个函数。</p>
+<p>这类函数f分为单值函数和多值函数。M叫做f的定义集合。f在M上所取的一切w值的集合N叫做函数f的量变集合。以后我们重点讨论M、N均为区域的那种情形。</p>
+<p>如果给定z=x+iy,w=u+iv，那么就相当于给定了两个实变量的二元函数</p>
+<script type="math/tex; mode=display">
+u=u(x,y),\;\;v=v(x,y)</script><p>如果我们把所有的z值放在一个平面上，而所有的w值放在另一个平面上，那么一个复变函数就可以看成一个在两复数平面间的映射。</p>
+<p>如果f在M上是单值的，同时M中两个不同的值对应N中两个不同的值，那么我们就说f是单叶的，或是一一的（在M上）</p>
+<p>反函数、复合函数的情形，我们在实变课程中已经研究的够多了，此处发扬精神不再赘述。</p>
+<h5 id="可微性和解析性"><a href="#可微性和解析性" class="headerlink" title="可微性和解析性"></a>可微性和解析性</h5><p>待施工</p>
 
       
 
@@ -462,11 +502,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
+                <a href="javascript:void(0)" class="js-tag color2">Differential Geometry</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Differential Geometry</a>
+                <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
               </li>
              
               <li class="article-tag-list-item">
