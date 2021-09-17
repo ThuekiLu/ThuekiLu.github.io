@@ -429,8 +429,37 @@ arctg \frac{y}{x}+(2k+1)\pi &\text{第二三象限}
 u=u(x,y),\;\;v=v(x,y)</script><p>如果我们把所有的z值放在一个平面上，而所有的w值放在另一个平面上，那么一个复变函数就可以看成一个在两复数平面间的映射。</p>
 <p>如果f在M上是单值的，同时M中两个不同的值对应N中两个不同的值，那么我们就说f是单叶的，或是一一的（在M上）</p>
 <p>反函数、复合函数的情形，我们在实变课程中已经研究的够多了，此处发扬精神不再赘述。</p>
-<h5 id="可微性和解析性"><a href="#可微性和解析性" class="headerlink" title="可微性和解析性"></a>可微性和解析性</h5><p>待施工</p>
-
+<h5 id="可微性和解析性"><a href="#可微性和解析性" class="headerlink" title="可微性和解析性"></a>可微性和解析性</h5><p>复变函数的求极限及连续性与实变函数并无不同，因而能够简单地将实变函数的性质推广到复变函数：</p>
+<p>在闭区域内连续的复变函数具有以下性质：</p>
+<p>（1）在区域内有界，即$|f(z)|\le M$，M为一个非负常数。</p>
+<p>（2）按模达到函数的最大值和最小值。</p>
+<p>（3）一致连续。</p>
+<p>以及一个不加证明给出的定理：</p>
+<h6 id="定理-1"><a href="#定理-1" class="headerlink" title="定理 1"></a>定理 1</h6><p>如果w=f（z）在区域D内连续，而且做出一个将这区域映射到w平面上的一个集合$\Delta$的单叶映射，那么$\Delta$也必定是一个区域，而且f的反函数在$\Delta$上也连续。</p>
+<p>下面我们可以进行复变函数可微性的判断了。</p>
+<h6 id="柯西-黎曼条件"><a href="#柯西-黎曼条件" class="headerlink" title="柯西-黎曼条件"></a>柯西-黎曼条件</h6><p>设函数f（z） = u（x，y） + i v（x，y）定义在点z的一个邻域内，且u和v这两个函数在z处都是可微的。那么：</p>
+<script type="math/tex; mode=display">
+f在点z处可微\;\; \Leftrightarrow\;\; 
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}</script><p>证略</p>
+<p>从复变函数的构造出发，我们可以发现实变函数的微分法则可以不加修改地应用到复变函数上面去。</p>
+<p>在一个区域D内每一个点处都可微的函数f，叫做在这个区域内的解析函数（也叫全纯函数或正规函数）。目前我们遇到的解析函数的概念是相对于单值函数而言的。</p>
+<p>最后出示一个柯西-黎曼条件的推广：</p>
+<p>若使$n^{0}$=i*$s^{0}$,则：</p>
+<script type="math/tex; mode=display">
+f在z点处可微 \Leftrightarrow \frac{\partial u}{\partial s}=\frac{\partial v}{\partial n},\frac{\partial u}{\partial n}=-\frac{\partial v}{\partial s}</script><p>我们指出极坐标柯西黎曼条件：</p>
+<p>应用上式有：</p>
+<script type="math/tex; mode=display">
+\frac{\partial u}{\partial \phi}=-r\frac{\partial v}{\partial r},\frac{\partial u}{\partial r}=-\frac{\partial v}{\partial \phi}</script><hr>
+<h3 id="初等函数"><a href="#初等函数" class="headerlink" title="初等函数"></a>初等函数</h3><p>本节专门讲述复数变量的初等函数及它们的几何表示</p>
+<p>这些函数是在数学分析中较为常见的函数类别在复数区域的自然推广，因而具有了许多原本不具有的性质。例如exp函数，推广后会获得周期性，sin和cos函数不再是有界函数，不同于0的任何复数的对数都有意义等。</p>
+<p>在复数区域内对多值函数的研究是有益的，只有在这样的研究中才能说明函数多值性的含义。</p>
+<h5 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h5><p>函数w = z^n 和$w=z^{1/n}$，其中n是任何一个正整数，已经在前面对于一切复数z定义过了。第一个函数 w = z^n是单值的。如果在z、w平面中引入极坐标</p>
+<script type="math/tex; mode=display">
+z=r(\cos\phi+i\sin\phi),w=\rho(\cos\theta+i\sin\theta)</script><p>那么第一个函数可以写成两个只与实变量有关的等式：</p>
+<script type="math/tex; mode=display">
+\rho =r^{n},\theta=n\phi</script><p>由此可见，该映射归根结底是伸长模和旋转角的映射。还可以看出。两个辐角相差2$\pi$/n的整倍数，具有相同模长的点可以在该映射下变换为同一个点。因此，要使其在一个额区域内是单叶映射，其充要条件是D中不存在任何两个模长相等且辐角相差整倍数2$\pi$/n的点。</p>
+<hr>
+<h3 id="待施工"><a href="#待施工" class="headerlink" title="待施工"></a>待施工</h3>
       
 
       
@@ -829,6 +858,14 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
               </li>
              
@@ -837,15 +874,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">plan</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
             
             <div class="clearfix"></div>
