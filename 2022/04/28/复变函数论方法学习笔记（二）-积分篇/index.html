@@ -11,12 +11,12 @@
   <meta name="description" content="复变函数论方法学习笔记—积分篇其实复变函数的积分简单应用真的很简单，真的 积分的存在性复变函数积分的存在性定义和实变函数的定义区别不大  设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\\ \lim_{n-&gt;\infin}\Sigma^n_{k&#x3D;0}f(\zeta_k)(z_{k+1}-z_k)&#x3D;\int_C f(z)dz \\称为是f（z）沿C的积分。其中z_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="复变函数论方法学习笔记（二）--积分篇">
-<meta property="og:url" content="http://example.com/2021/10/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/index.html">
+<meta property="og:url" content="http://example.com/2022/04/28/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/index.html">
 <meta property="og:site_name" content="KIKIada&#39;s ugly home">
 <meta property="og:description" content="复变函数论方法学习笔记—积分篇其实复变函数的积分简单应用真的很简单，真的 积分的存在性复变函数积分的存在性定义和实变函数的定义区别不大  设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\\ \lim_{n-&gt;\infin}\Sigma^n_{k&#x3D;0}f(\zeta_k)(z_{k+1}-z_k)&#x3D;\int_C f(z)dz \\称为是f（z）沿C的积分。其中z_">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-08T08:27:43.000Z">
-<meta property="article:modified_time" content="2021-10-08T09:13:29.576Z">
+<meta property="article:published_time" content="2022-04-28T15:27:43.000Z">
+<meta property="article:modified_time" content="2022-04-28T15:28:24.360Z">
 <meta property="article:author" content="KIKIada">
 <meta property="article:tag" content="Functions of Complex">
 <meta name="twitter:card" content="summary">
@@ -169,8 +169,8 @@
   
 
         
-        <a href="/2021/10/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/" class="archive-article-date">
-  	<time datetime="2021-10-08T08:27:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-08</time>
+        <a href="/2022/04/28/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/" class="archive-article-date">
+  	<time datetime="2022-04-28T15:27:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-28</time>
 </a>
         
       </header>
@@ -213,6 +213,34 @@ F(z)=\int^z_{z_0}f(z)dz</script><p>是一个在D内解析的函数，并且导�
 <script type="math/tex; mode=display">
 f(z)=\frac 1 {2i\pi}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}</script><p>其中C是区域D 的边界，其方向是使D始终保持在其左边。</p>
 <p>注意到等号的右边只包含函数边界上的值，这也就是说，在我们规定的情况下，函数在区域内的任何一个值，都已经由边界上的值来确定。</p>
+<p>在我们看来，这种任何一个点处的值都由周线上的值决定的性质是十分惊人的，这表现出解析函数对自身的某种奇特的约束，从而为我们后面讲解调和问题提供了原理上的理解。</p>
+<p>接下来我们可以从柯西公式导出复变函数的中值定理：</p>
+<script type="math/tex; mode=display">
+设f（z）在区域D内解析，在\bar D 上连续。那么在D内的一个圆心在z_0、半径为r的圆周C上，有:\\
+f(z_0) = \frac 1 {2\pi}\int^{2\pi}_0 f(z_0+re^{i\phi})d\phi</script><p>这个公式允许我们从圆周上估计解析函数在圆心处的值。</p>
+<h3 id="最大值原理和施瓦茨引理"><a href="#最大值原理和施瓦茨引理" class="headerlink" title="最大值原理和施瓦茨引理"></a>最大值原理和施瓦茨引理</h3><h5 id="引理1"><a href="#引理1" class="headerlink" title="引理1"></a>引理1</h5><p>在某区域内实数部分为常数或模为常数的解析函数为常值函数。</p>
+<p>由CR条件易得。</p>
+<p>接着我们引出模最大值原理：</p>
+<h4 id="模最大值原理"><a href="#模最大值原理" class="headerlink" title="模最大值原理"></a>模最大值原理</h4><p>不为常值函数的解析函数在$D$上解析，在$\bar D$上连续，那么该函数不可能在区域的任一内点处按模达到最大值（同理，最小值）</p>
+<p>证明较为繁琐，我们归纳如下：</p>
+<p>（1）假定函数f和区域D，反设f在D内达到最大值，并设取最大值的集合为E。</p>
+<p>（2）由于f不为常数，则E必不与D相同，所以必存在E的某一边界点$z_0$,它同时也是D的内点。</p>
+<p>（3）由于f的连续性，有$z_0$处f取最大值M。在$z_0$处取一小圆周C，使得$C:|z-z_0| = r$，使得这圆周上至少有一个不属于E的点$z_1$。</p>
+<p>（4）f在$z_1$处的值小于M，由于f的连续性，可以在圆周C上找到一段弧C1，使得在弧上f的值均小于M-$\epsilon$，将圆周的其余部分记为C2,使用中值定理估计f（$z_0$）,得到矛盾。</p>
+<p>证明思路大体就是应用中值定理，圆周上的平均值为圆心，如果圆心取得最大值，那么圆周上必然均为最大值，这样，继续向外估计，直到触碰到最大值的边界就能得到矛盾（由于f不为常数，这样的边界是存在的）。</p>
+<p>接下来是共形映射等理论中很有用的施瓦茨引理：</p>
+<h4 id="施瓦茨引理"><a href="#施瓦茨引理" class="headerlink" title="施瓦茨引理"></a>施瓦茨引理</h4><script type="math/tex; mode=display">
+如果函数f（z）在圆|z|<1内是解析的，在|z|\le1内是连续的，且f(0)=0，又在圆内处处有|f（z）|\le 1，那么在这个圆内有：\\
+|f(z)|\le |z|.\\
+这时，如果圆内哪怕一个点处有|f(z)|=|z|，那么这个等式在整个圆内都成立，并且:\hfill\\
+f(z)=e^{i\alpha}z\\
+其中\alpha是一个实常数。\hfill</script><p>只要考虑函数</p>
+<script type="math/tex; mode=display">
+\varphi(z) =\begin{cases}
+\frac {f(z)}{z} &,当z\neq 0\\
+ f^\prime(0)&,当z=0\\
+\end{cases}</script><p>即可。</p>
+<p>在几何上，施瓦茨引理表明，在任何一个利用解析函数f（z），f（0）=0将单位圆映射到位于单位圆内部的区域$\Delta$上时，任何一个点的像都比它本身更靠近原点。而如果哪怕在一个点处存在一个不动点，那么像的区域就与原来的单位圆完全重合，从而这个映射相当于一个旋转。</p>
 
       
 
@@ -303,7 +331,7 @@ f(z)=\frac 1 {2i\pi}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}</script><p>其中C是�
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/04/28/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +345,9 @@ f(z)=\frac 1 {2i\pi}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}</script><p>其中C是�
   
 <nav id="article-nav">
   
-    <a href="/2021/10/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          复变函数论方法学习笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/10/03/%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">张量分析学习笔记</div>
+    <a href="/2021/10/08/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">复变函数论方法学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -485,11 +504,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
+                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
               </li>
              
               <li class="article-tag-list-item">
