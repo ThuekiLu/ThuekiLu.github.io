@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>微分几何讲义学习笔记（1） | KIKIada&#39;s ugly home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目录 1、回顾：实结构 2、流形的具体概念 3、实例 4、切空间 回顾：实结构 在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于度量和拓扑的基本观点。">
+  <meta name="description" content="目录1、回顾：实结构 2、微分流形 3、实例 4、切空间 5、子流形 6、弗洛贝尼乌斯定理（Frobenius’ Theorem） 回顾：实结构在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于实空间度量和拓扑的基本观点。 我们使用$\R$来表示实数域。令  \R^m\;&#x3D;\;\{\textbf x &#x3D; (x^1,x^2,...,x^m)|x^i\in\R,\;1\le i\le m\}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微分几何讲义学习笔记（1）">
 <meta property="og:url" content="http://example.com/2022/04/29/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="KIKIada&#39;s ugly home">
-<meta property="og:description" content="目录 1、回顾：实结构 2、流形的具体概念 3、实例 4、切空间 回顾：实结构 在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于度量和拓扑的基本观点。">
+<meta property="og:description" content="目录1、回顾：实结构 2、微分流形 3、实例 4、切空间 5、子流形 6、弗洛贝尼乌斯定理（Frobenius’ Theorem） 回顾：实结构在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于实空间度量和拓扑的基本观点。 我们使用$\R$来表示实数域。令  \R^m\;&#x3D;\;\{\textbf x &#x3D; (x^1,x^2,...,x^m)|x^i\in\R,\;1\le i\le m\}">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-29T05:19:33.000Z">
-<meta property="article:modified_time" content="2022-04-29T05:28:54.249Z">
+<meta property="article:modified_time" content="2022-04-29T10:06:19.177Z">
 <meta property="article:author" content="KIKIada">
 <meta property="article:tag" content="Differential Geometry">
 <meta name="twitter:card" content="summary">
@@ -177,13 +177,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="目录">目录</h2>
-<p>1、回顾：实结构</p>
-<p>2、流形的具体概念</p>
+        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1、回顾：实结构</p>
+<p>2、微分流形</p>
 <p>3、实例</p>
 <p>4、切空间</p>
-<h3 id="回顾实结构">回顾：实结构</h3>
-<p>在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于度量和拓扑的基本观点。</p>
+<p>5、子流形</p>
+<p>6、弗洛贝尼乌斯定理（Frobenius’ Theorem）</p>
+<h3 id="回顾：实结构"><a href="#回顾：实结构" class="headerlink" title="回顾：实结构"></a>回顾：实结构</h3><p>在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于实空间度量和拓扑的基本观点。</p>
+<p>我们使用$\R$来表示实数域。令</p>
+<script type="math/tex; mode=display">
+\R^m\;=\;\{\textbf x = (x^1,x^2,...,x^m)|x^i\in\R,\;1\le i\le m\}</script><p>这是m维实数元组的集合。数字$x^i$称为元素$\textbf x \in \R^m$的第i坐标分量。对于任意的$x,y\in \R^m,a\in \R$，我们有</p>
+<script type="math/tex; mode=display">
+(x+y)^i=x^i+y^i\\
+(ax)^i=ax^i</script><p>这定义了集合$\R^m$中的加法和标量积，因而使得其成为一个R上的m维向量空间。</p>
+<p>除了线性结构，$\R^m$​也有标准拓扑结构。如定义</p>
+<script type="math/tex; mode=display">
+d(x,y)=\sqrt{\sum^m_{i=1} (x^i-y^i)^2}\;\;\;\;\;\;,x,y\in \R^m</script><p>显见d为一度量。因而$(\R^m,d)$为一度量空间。在$\R^m$上由d诱导出的拓扑便称为自然拓扑。因而其具有自然拓扑结构。配备有度量d的m维向量空间$\R^m$称为m维欧几里得空间（Euclidean Space）</p>
+<p>设f是一个定义在m维欧几里得空间的某开子集U上的函数。如果对于一个正整数r，和任意的k$\le$r，f的k阶任意偏导数都存在且连续，那么我们说f属于U上的r阶连续可微类，记作$f\in C^r(U)$。如果对于任意正整数r都有$f\in C^r(U)$,那么我们说f属于U上的光滑函数类，记作$f\in C^\infin(U)$。如果f是解析的，也就是说，如果f在属于U的每个点的某个邻域内都可以表示成幂级数，那么我们说f属于U上的解析函数类，记作$f\in C^\omega(U)$</p>
+<p>以上基本概念相信我们已经非常熟悉了。下面介绍流形的定义和概念。</p>
+<h3 id="微分流形"><a href="#微分流形" class="headerlink" title="微分流形"></a>微分流形</h3><p>待更新</p>
 
       
 
@@ -443,7 +455,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -451,7 +463,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
