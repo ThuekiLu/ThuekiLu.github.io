@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>复变函数论方法学习笔记（二）--积分篇 | KIKIada&#39;s ugly home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="复变函数论方法学习笔记–积分篇 其实复变函数的积分简单应用真的很简单，真的 积分的存在性 复变函数积分的存在性定义和实变函数的定义区别不大 $$ 设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\ \lim_{n-&gt;\infin}\Sigma^n_{k&#x3D;0}f(\zeta_k)(z_{k+1}-z_k)&#x3D;\int_C f(z)dz \称为是f（z）沿C的积分">
+  <meta name="description" content="复变函数论方法学习笔记--积分篇 其实复变函数的积分简单应用真的很简单，真的 积分的存在性 复变函数积分的存在性定义和实变函数的定义区别不大 \[ 设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\\ \lim_{n-&gt;\infin}\Sigma^n_{k&#x3D;0}f(\zeta_k)(z_{k+1}-z_k)&#x3D;\int_C f(z)dz \\称为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="复变函数论方法学习笔记（二）--积分篇">
 <meta property="og:url" content="http://example.com/2022/04/28/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E8%AE%BA%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89-%E7%A7%AF%E5%88%86%E7%AF%87/index.html">
 <meta property="og:site_name" content="KIKIada&#39;s ugly home">
-<meta property="og:description" content="复变函数论方法学习笔记–积分篇 其实复变函数的积分简单应用真的很简单，真的 积分的存在性 复变函数积分的存在性定义和实变函数的定义区别不大 $$ 设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\ \lim_{n-&gt;\infin}\Sigma^n_{k&#x3D;0}f(\zeta_k)(z_{k+1}-z_k)&#x3D;\int_C f(z)dz \称为是f（z）沿C的积分">
+<meta property="og:description" content="复变函数论方法学习笔记--积分篇 其实复变函数的积分简单应用真的很简单，真的 积分的存在性 复变函数积分的存在性定义和实变函数的定义区别不大 \[ 设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\\ \lim_{n-&gt;\infin}\Sigma^n_{k&#x3D;0}f(\zeta_k)(z_{k+1}-z_k)&#x3D;\int_C f(z)dz \\称为">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-28T15:27:43.000Z">
 <meta property="article:modified_time" content="2022-04-28T15:48:03.394Z">
@@ -178,100 +178,95 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h3 id="复变函数论方法学习笔记–积分篇">复变函数论方法学习笔记–积分篇</h3>
+<h3 id="复变函数论方法学习笔记--积分篇">复变函数论方法学习笔记--积分篇</h3>
 <p>其实复变函数的积分简单应用真的很简单，真的</p>
 <h4 id="积分的存在性">积分的存在性</h4>
-<p>复变函数积分的存在性定义和实变函数的定义区别不大<br>
-$$<br>
-设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\<br>
-\lim_{n-&gt;\infin}\Sigma^n_{k=0}f(\zeta_k)(z_{k+1}-z_k)=\int_C f(z)dz<br>
-\称为是f（z）沿C的积分。其中z_n是把C分成n个分段的点列，a与b表示曲线的端点，\zeta_k是分段上任一点。<br>
-$$<br>
-在取极限时要求相邻两分点之间距离的最大值趋近于0.</p>
-<p>如果C是一条逐段光滑的曲线，f（z）时一个逐段连续并且有界的函数，那么积分总是存在的。其证明归结于线积分的存在定理。事实上，令f=u+iv，那么积分可以化为：<br>
-$$<br>
-\int_Cf(z)dz=\int_Cudx-vdy+i\int_Cudy+vdx<br>
-$$<br>
+<p>复变函数积分的存在性定义和实变函数的定义区别不大 <span class="math display">\[
+设C是一条给定的有向曲线，在这条曲线上给定了一个复变函数f（z），那么我们把极限\\
+\lim_{n-&gt;\infin}\Sigma^n_{k=0}f(\zeta_k)(z_{k+1}-z_k)=\int_C f(z)dz
+\\称为是f（z）沿C的积分。其中z_n是把C分成n个分段的点列，a与b表示曲线的端点，\zeta_k是分段上任一点。
+\]</span> 在取极限时要求相邻两分点之间距离的最大值趋近于0.</p>
+<p>如果C是一条逐段光滑的曲线，f（z）时一个逐段连续并且有界的函数，那么积分总是存在的。其证明归结于线积分的存在定理。事实上，令f=u+iv，那么积分可以化为：
+<span class="math display">\[
+\int_Cf(z)dz=\int_Cudx-vdy+i\int_Cudy+vdx
+\]</span>
 在我们的条件之下，这五个积分都是存在的，因而能把复变函数积分的计算，转化为实变函数的计算。</p>
 <p>由此可见，实变函数的积分的加性和齐性都可以推广到复变函数上来。复变函数积分模的估值，由定义可得，以ML为上界，与实变函数也是没有两样的。</p>
 <hr>
 <h3 id="柯西定理">柯西定理</h3>
 <p>一般情形中，复变函数的求积分总是和积分路径相关的，但是如果被积函数在包含周线C的区域D内是解析的，那么积分的值就可能是路径无关的了。</p>
-<h4 id="柯西定理-v2">柯西定理</h4>
+<h4 id="柯西定理-1">柯西定理</h4>
 <p>如果一个函数在一个单连通区域D内是解析的，那么对于该区域内所有具有相同公共端点的曲线而言，该函数沿它们的积分都相同</p>
 <p>由CR方程易证</p>
 <p>由柯西定理，我们可以推出一系列和实变函数积分类似的定理</p>
-<h5 id="定理2：">定理2：</h5>
-<p>如果一个函数在一个单连通区域内是解析的，那么<br>
-$$<br>
-F(z)=\int^z_{z_0}f(z)dz<br>
-$$<br>
-是一个在D内解析的函数，并且导数就是f（z）</p>
-<h5 id="定理3：">定理3：</h5>
+<h5 id="定理2">定理2：</h5>
+<p>如果一个函数在一个单连通区域内是解析的，那么 <span class="math display">\[
+F(z)=\int^z_{z_0}f(z)dz
+\]</span> 是一个在D内解析的函数，并且导数就是f（z）</p>
+<h5 id="定理3">定理3：</h5>
 <p>同一函数的任何两个原函数，彼此最多相差一个常数项。</p>
-<h5 id="定理4：">定理4：</h5>
+<h5 id="定理4">定理4：</h5>
 <p>如果F（z)是解析函数f（z）的任何一个原函数，那么f（z）从z0到z的积分等于F（z）-F（z0）。</p>
 <p>最后我们给出柯西定理的另一个形式：</p>
-<h5 id="定理5：">定理5：</h5>
+<h5 id="定理5">定理5：</h5>
 <p>如果一个函数在单连通区域D内解析，那么该函数沿着D内任何一条闭周线的积分恒为0。</p>
 <p>柯西定理对于边界有一推广：</p>
-<h5 id="定理6：">定理6：</h5>
-<p>若f（z）在单连通区域D内解析，在闭区域$\bar{D}$边界上连续，那么f（z）沿着区域D取积分的值为0。</p>
-<h5 id="推广到多阶连通区域：">推广到多阶连通区域：</h5>
+<h5 id="定理6">定理6：</h5>
+<p>若f（z）在单连通区域D内解析，在闭区域<span class="math inline">\(\bar{D}\)</span>边界上连续，那么f（z）沿着区域D取积分的值为0。</p>
+<h5 id="推广到多阶连通区域">推广到多阶连通区域：</h5>
 <p>一般地，柯西定理对于多阶连通区域是不成立的，比如f（z）=1/z在圆环上处处解析，但是从-1到1的上半和下半圆周的积分却不同。</p>
 <p>但是如果所要求的两条曲线在多阶连通区域内能围成一个单连通区域时，柯西定理显然是适用的。由此可见：</p>
 <p>在多阶连通区域内，如果积分的周线连续地改变其形状，两个端点保持不动，并且在全部的变动时间内周线始终留在区域的内部，那么解析函数沿着这路线的积分不变。</p>
 <p>一般地，在多阶连通区域内，如果我们在两个点之间选择路线时，选择将区域内的那些“洞”包含在内，我们看到，无论我们以怎样的方式包围那些洞，我们的积分都只和绕洞的次数有关，所以我们可以立刻想到，这些洞对我们积分的影响，是以一种倍数常量的方式施加的，这样的影响的大小只和我们选择路线时绕这些洞的圈数有关，这些圈圈，完全可以看作是全等的，因而影响是线性倍数常量的。</p>
-<p>亦即<br>
-$$<br>
-\int_{C’}=\int_{C_0}f(z)dz+N_1\Gamma_1+…+N_n\Gamma_n<br>
-$$<br>
+<p>亦即 <span class="math display">\[
+\int_{C&#39;}=\int_{C_0}f(z)dz+N_1\Gamma_1+...+N_n\Gamma_n
+\]</span>
 式子中的未知量Γ叫做f（z）在多阶连通区域D内的积分周期，或者叫积分常量。</p>
 <h3 id="柯西公式和中值定理">柯西公式和中值定理</h3>
-<p>设函数f（z）在n阶连通区域内是解析的，在$\bar D$内是连续的.我们来证明，这区域内的任何一个内点z都可以用柯西公式来表示：<br>
-$$<br>
-f(z)=\frac 1 {2i\pi}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}<br>
-$$<br>
-其中C是区域D 的边界，其方向是使D始终保持在其左边。</p>
+<p>设函数f（z）在n阶连通区域内是解析的，在<span class="math inline">\(\bar
+D\)</span>内是连续的.我们来证明，这区域内的任何一个内点z都可以用柯西公式来表示：
+<span class="math display">\[
+f(z)=\frac 1 {2i\pi}\int_C\frac{f(\zeta)d\zeta}{\zeta-z}
+\]</span> 其中C是区域D 的边界，其方向是使D始终保持在其左边。</p>
 <p>注意到等号的右边只包含函数边界上的值，这也就是说，在我们规定的情况下，函数在区域内的任何一个值，都已经由边界上的值来确定。</p>
 <p>在我们看来，这种任何一个点处的值都由周线上的值决定的性质是十分惊人的，这表现出解析函数对自身的某种奇特的约束，从而为我们后面讲解调和问题提供了原理上的理解。</p>
-<p>接下来我们可以从柯西公式导出复变函数的中值定理：<br>
-$$<br>
-设f（z）在区域D内解析，在\bar D 上连续。那么在D内的一个圆心在z_0、半径为r的圆周C上，有:\<br>
-f(z_0) = \frac 1 {2\pi}\int^{2\pi}_0 f(z_0+re^{i\phi})d\phi<br>
-$$<br>
-这个公式允许我们从圆周上估计解析函数在圆心处的值。</p>
+<p>接下来我们可以从柯西公式导出复变函数的中值定理： <span class="math display">\[
+设f（z）在区域D内解析，在\bar D
+上连续。那么在D内的一个圆心在z_0、半径为r的圆周C上，有:\\
+f(z_0) = \frac 1 {2\pi}\int^{2\pi}_0 f(z_0+re^{i\phi})d\phi
+\]</span> 这个公式允许我们从圆周上估计解析函数在圆心处的值。</p>
 <h3 id="最大值原理和施瓦茨引理">最大值原理和施瓦茨引理</h3>
 <h5 id="引理1">引理1</h5>
 <p>在某区域内实数部分为常数或模为常数的解析函数为常值函数。</p>
 <p>由CR条件易得。</p>
 <p>接着我们引出模最大值原理：</p>
 <h4 id="模最大值原理">模最大值原理</h4>
-<p>不为常值函数的解析函数在$D$上解析，在$\bar D$上连续，那么该函数不可能在区域的任一内点处按模达到最大值（同理，最小值）</p>
+<p>不为常值函数的解析函数在<span class="math inline">\(D\)</span>上解析，在<span class="math inline">\(\bar
+D\)</span>上连续，那么该函数不可能在区域的任一内点处按模达到最大值（同理，最小值）</p>
 <p>证明较为繁琐，我们归纳如下：</p>
 <p>（1）假定函数f和区域D，反设f在D内达到最大值，并设取最大值的集合为E。</p>
-<p>（2）由于f不为常数，则E必不与D相同，所以必存在E的某一边界点$z_0$,它同时也是D的内点。</p>
-<p>（3）由于f的连续性，有$z_0$处f取最大值M。在$z_0$处取一小圆周C，使得$C:|z-z_0| = r$，使得这圆周上至少有一个不属于E的点$z_1$。</p>
-<p>（4）f在$z_1$处的值小于M，由于f的连续性，可以在圆周C上找到一段弧C1，使得在弧上f的值均小于M-$\epsilon$，将圆周的其余部分记为C2,使用中值定理估计f（$z_0$）,得到矛盾。</p>
+<p>（2）由于f不为常数，则E必不与D相同，所以必存在E的某一边界点<span class="math inline">\(z_0\)</span>,它同时也是D的内点。</p>
+<p>（3）由于f的连续性，有<span class="math inline">\(z_0\)</span>处f取最大值M。在<span class="math inline">\(z_0\)</span>处取一小圆周C，使得<span class="math inline">\(C:|z-z_0| =
+r\)</span>，使得这圆周上至少有一个不属于E的点<span class="math inline">\(z_1\)</span>。</p>
+<p>（4）f在<span class="math inline">\(z_1\)</span>处的值小于M，由于f的连续性，可以在圆周C上找到一段弧C1，使得在弧上f的值均小于M-<span class="math inline">\(\epsilon\)</span>，将圆周的其余部分记为C2,使用中值定理估计f（<span class="math inline">\(z_0\)</span>）,得到矛盾。</p>
 <p>证明思路大体就是应用中值定理，圆周上的平均值为圆心，如果圆心取得最大值，那么圆周上必然均为最大值，这样，继续向外估计，直到触碰到最大值的边界就能得到矛盾（由于f不为常数，这样的边界是存在的）。</p>
 <p>接下来是共形映射等理论中很有用的施瓦茨引理：</p>
 <h4 id="施瓦茨引理">施瓦茨引理</h4>
-<p>$$<br>
-如果函数f（z）在圆|z|&lt;1内是解析的，在|z|\le1内是连续的，且f(0)=0，又在圆内处处有|f（z）|\le 1，那么在这个圆内有：\<br>
-|f(z)|\le |z|.\<br>
-这时，如果圆内哪怕一个点处有|f(z)|=|z|，那么这个等式在整个圆内都成立，并且:\<br>
-f(z)=e^{i\alpha}z\<br>
-其中\alpha是一个实常数。<br>
-$$</p>
-<p>只要考虑函数<br>
-$$<br>
-\varphi(z) =\begin{cases}<br>
-\frac {f(z)}{z} &amp;,当z\neq 0\<br>
-f^\prime(0)&amp;,当z=0\<br>
-\end{cases}<br>
-$$<br>
-即可。</p>
-<p>在几何上，施瓦茨引理表明，在任何一个利用解析函数f（z），f（0）=0将单位圆映射到位于单位圆内部的区域$\Delta$上时，任何一个点的像都比它本身更靠近原点。而如果哪怕在一个点处存在一个不动点，那么像的区域就与原来的单位圆完全重合，从而这个映射相当于一个旋转。</p>
+<p><span class="math display">\[
+如果函数f（z）在圆|z|&lt;1内是解析的，在|z|\le1内是连续的，且f(0)=0，又在圆内处处有|f（z）|\le
+1，那么在这个圆内有：\\
+|f(z)|\le |z|.\\
+这时，如果圆内哪怕一个点处有|f(z)|=|z|，那么这个等式在整个圆内都成立，并且:\\
+f(z)=e^{i\alpha}z\\
+其中\alpha是一个实常数。
+\]</span></p>
+<p>只要考虑函数 <span class="math display">\[
+\varphi(z) =\begin{cases}
+\frac {f(z)}{z} &amp;,当z\neq 0\\
+f^\prime(0)&amp;,当z=0\\
+\end{cases}
+\]</span> 即可。</p>
+<p>在几何上，施瓦茨引理表明，在任何一个利用解析函数f（z），f（0）=0将单位圆映射到位于单位圆内部的区域<span class="math inline">\(\Delta\)</span>上时，任何一个点的像都比它本身更靠近原点。而如果哪怕在一个点处存在一个不动点，那么像的区域就与原来的单位圆完全重合，从而这个映射相当于一个旋转。</p>
 
       
 
@@ -540,11 +535,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
