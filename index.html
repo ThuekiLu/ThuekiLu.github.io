@@ -154,6 +154,170 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-微分几何讲义学习笔记（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/30/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">微分几何讲义学习笔记（1）</a>
+    </h1>
+  
+
+        
+        <a href="/2022/04/30/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2022-04-30T06:19:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="目录">目录</h3>
+<p>1、回顾：实结构</p>
+<p>2、微分流形</p>
+<p>3、实例</p>
+<p>4、切空间</p>
+<p>5、子流形</p>
+<p>6、弗洛贝尼乌斯定理（Frobenius' Theorem）</p>
+<h3 id="回顾实结构">回顾：实结构</h3>
+<p>在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于实空间度量和拓扑的基本观点。</p>
+<p>我们使用<span class="math inline">\(\R\)</span>来表示实数域。令 <span class="math display">\[
+\R^m\;=\;\{\textbf x = (x^1,x^2,...,x^m)|x^i\in\R,\;1\le i\le m\}
+\]</span> 这是m维实数元组的集合。数字<span class="math inline">\(x^i\)</span>称为元素<span class="math inline">\(\textbf x \in
+\R^m\)</span>的第i坐标分量。对于任意的<span class="math inline">\(x,y\in
+\R^m,a\in \R\)</span>，我们有 <span class="math display">\[
+(x+y)^i=x^i+y^i\\
+(ax)^i=ax^i
+\]</span> 这定义了集合<span class="math inline">\(\R^m\)</span>中的加法和标量积，因而使得其成为一个R上的m维向量空间。</p>
+<p>除了线性结构，<span class="math inline">\(\R^m\)</span>​也有标准拓扑结构。如定义 <span class="math display">\[
+d(x,y)=\sqrt{\sum^m_{i=1} (x^i-y^i)^2}\;\;\;\;\;\;,x,y\in \R^m
+\]</span> 显见d为一度量。因而<span class="math inline">\((\R^m,d)\)</span>为一度量空间。在<span class="math inline">\(\R^m\)</span>上由d诱导出的拓扑便称为自然拓扑。因而其具有自然拓扑结构。配备有度量d的m维向量空间<span class="math inline">\(\R^m\)</span>称为m维欧几里得空间（Euclidean
+Space）</p>
+<p>设f是一个定义在m维欧几里得空间的某开子集U上的函数。如果对于一个正整数r，和任意的k<span class="math inline">\(\le\)</span>r，f的k阶任意偏导数都存在且连续，那么我们说f属于U上的r阶连续可微类，记作<span class="math inline">\(f\in C^r(U)\)</span>。如果对于任意正整数r都有<span class="math inline">\(f\in
+C^r(U)\)</span>,那么我们说f属于U上的光滑函数类，记作<span class="math inline">\(f\in
+C^\infin(U)\)</span>。如果f是解析的，也就是说，如果f在属于U的每个点的某个邻域内都可以表示成幂级数，那么我们说f属于U上的解析函数类，记作<span class="math inline">\(f\in C^\omega(U)\)</span></p>
+<p>以上基本概念相信我们已经非常熟悉了。下面介绍流形的定义和概念。</p>
+<h3 id="微分流形">微分流形</h3>
+<p>要问微分几何研究的主要对象是什么，那必定是微分流形无疑。微分流形是建立在流形的基础上的，所以我们先来讲讲流形的概念。</p>
+<p>流形是黎曼在研究微分几何时引入的概念，我们说一个集合是一个流形，大体上的意思是讲这个集合是有若干片欧几里得空间“拼接”而成。</p>
+<h5 id="定义1流形">定义1：流形</h5>
+<p>设M是豪斯多夫空间（Hausdorff Space），如果<span class="math inline">\(\forall p \in M,\exist
+U(p)是p的邻域\)</span>,使得U同胚于<span class="math inline">\(\R^m\)</span>的某个开子集，那么我们说M是一个m维流形（manifold）或m维拓扑流形。</p>
+<p>设上述定义中的同胚映射是<span class="math inline">\(\varphi_U:U\to\varphi_U(U)\)</span>，此处<span class="math inline">\(\varphi_U\)</span>（U）是m维欧几里得空间中的开集。那么我们称<span class="math inline">\((U,\varphi_U)\)</span>是M的一个坐标卡。由于<span class="math inline">\(\varphi_U\)</span>是同胚，我们可以定义U中元素y的坐标为
+<span class="math display">\[
+u^i = (\varphi_U(y))^i \;\;\;\;i=1,2,...,m
+\]</span> 其中的u，我们称为y的本地坐标或局部坐标。</p>
+<p>设<span class="math inline">\((U,\varphi_U),(V,\varphi_V)\)</span>​是两个坐标卡，如果U和V的交不空，那么<span class="math inline">\(\varphi_U(U\cap V)\)</span>​和<span class="math inline">\(\varphi_V(U\cap
+V)\)</span>​都是^m里的非空开集。映射$ _U_V^{-1} <span class="math inline">\(​就是定义在\)</span>_U(UV)<span class="math inline">\(​上，到\)</span>_V(UV)$​的函数，易见该函数是双射，设它为f，其反函数为g，那么
+<span class="math display">\[
+y=f(x)\\
+x=g(y)
+\]</span> 又有 <span class="math display">\[
+f(g(y))=y\\
+g(f(x))=x
+\]</span> 对于两个坐标卡<span class="math inline">\((U,\varphi_U)\)</span>,<span class="math inline">\((V,\varphi_V)\)</span>，我们说他们是<span class="math inline">\(C^r\)</span>相容的，指的是要么<span class="math inline">\(U\cap V = \varnothing\)</span>，
+要么f和g都是r次连续可微类（注意f和g都是实集上的函数，所以可微性是已经定义好的）。</p>
+<h5 id="定义2微分结构">定义2：微分结构</h5>
+<p>设M是一个m维流形。如果对于一个M上的坐标卡集合<span class="math inline">\(\mathcal A\)</span>满足以下条件，那么我们称<span class="math inline">\(\mathcal A\)</span>
+是一个M上的r次可微类微分结构（<span class="math inline">\(C^r\)</span>-differentiable structure）:</p>
+<p>(1){U,V,W,...}是一个M上的开覆盖。</p>
+<p>(2)任何两个坐标卡都是<span class="math inline">\(C^r\)</span>相容的。</p>
+<p>(3)<span class="math inline">\(\mathcal
+A\)</span>是极大的。也就是说，任何一个坐标卡如果它于任何<span class="math inline">\(\mathcal A\)</span> 中的坐标卡都<span class="math inline">\(C^r\)</span>相容，那么它必属于<span class="math inline">\(\mathcal A\)</span>。</p>
+<p>具有r阶可微类微分结构的集合M叫做r次可微微分流形，其中的坐标卡叫做M的相容坐标卡。M中点p的局部坐标系统，从现在起将总是从包含p的相容坐标卡中作出的。</p>
+<p>我们容易看出，微分流形结构中的前两条都是基本的。不难验证，如果一个坐标卡集<span class="math inline">\(\mathcal
+A&#39;\)</span>满足前两个条件，那么对于任意一个正整数s，<span class="math inline">\(0&lt;s\le
+r\)</span>,都存在唯一一个s可微微分结构<span class="math inline">\(\mathcal A\)</span>,使得<span class="math inline">\(\mathcal A&#39; \subset \mathcal
+A\)</span>。这个微分结构<span class="math inline">\(\mathcal
+A\)</span>是由<span class="math inline">\(\mathcal A&#39;\)</span>
+唯一决定的。因此要产生一个r次微分结构，只需要指明一个相容的开覆盖坐标卡即可。</p>
+<p>注：我们提及的流形M将总是假设为第二可数的。</p>
+<p>如果在M上给定了一个<span class="math inline">\(\infin\)</span>阶微分结构，那么我们称M为一个光滑流形。如果给定了一个<span class="math inline">\(C^\omega\)</span>微分结构，那么我们称M为一个解析流形。我们最感兴趣的是光滑流形，因而当我们没有特意提及时，总是假定指定的流形是微分流形。</p>
+<p>定义了流形和微分结构之后，我们还缺乏结构上或结构之间的联系，所以我们还需要定义流形上或流形之间函数的可微性和积流形的概念。</p>
+<p>在光滑流形上，光滑函数的概念是良好定义的。注意到M上的函数f和局部坐标函数的反函数<span class="math inline">\(\varphi_U^{-1}\)</span>的复合是一个从 <span class="math inline">\(\R^m\)</span>到 <span class="math inline">\(\R^m\)</span>的映射，而且对于任意其它的坐标卡<span class="math inline">\(\varphi_V\)</span>,总有<span class="math inline">\(f\circ \varphi_V^{-1} = f\circ \varphi_U^{-1}
+\circ (\varphi_U \circ
+\varphi_V^{-1})\)</span>，所以我们看出这个复合函数的可微性是和坐标卡选择无关的，因而可以找出f可微性和光滑性的定义。</p>
+<p>实值光滑函数只不过是光滑流形间光滑函数的特例。</p>
+<h5 id="定义3光滑函数">定义3：光滑函数</h5>
+<p>设<span class="math inline">\(f：M\to
+N\)</span>是连续映射，其中M和N都是光滑流形。且dim（M）=m，dim（N）=n。如果在<span class="math inline">\(p\in M\)</span>处存在相容坐标卡<span class="math inline">\((U,\varphi_U)\)</span>，且在f（p）处也存在相容坐标卡<span class="math inline">\((V,\varphi_V)\)</span>,使得映射 <span class="math display">\[
+\psi_V\circ f\circ \varphi_U^{-1}:\varphi_U(U)\to\psi_V(V)
+\]</span> 在点<span class="math inline">\(\varphi_U(p)\)</span>是光滑的，那么f在p点被叫做<span class="math inline">\(C^\infin\)</span>
+的。如果映射f在M上的每一点都是<span class="math inline">\(C^\infin\)</span>
+的，那么f被称为M上的光滑函数。</p>
+<p>在m=n的情形下，如果f是一个同胚映射且<span class="math inline">\(f\)</span>和<span class="math inline">\(f^{-1}\)</span>都是光滑函数，那么f被称为一个微分同胚映射。如果M和N是微分同胚，那么我们说它们对应的光滑微分结构是同构的。稍后我们会见到，在米勒球的例子中，两个微分结构是同胚但不同构的。</p>
+<p>另一个重要的例子是所谓的流形上的参数曲线。M是流形<span class="math inline">\(（a，b）\subset R\)</span>，那么f：<span class="math inline">\(M\to N\)</span>就是N上的一个参数曲线。</p>
+<h5 id="定义4积流形">定义4：积流形</h5>
+<p>（积流形定义待补充）</p>
+<hr>
+<h3 id="实例">实例</h3>
+<h5 id="m1维球面">m+1维球面</h5>
+<h5 id="m维射影空间p_m">m维射影空间（<span class="math inline">\(P_m\)</span>）</h5>
+<h5 id="米勒球milnors-sphere">米勒球（Milnor's Sphere）</h5>
+<hr>
+<h3 id="切空间">切空间</h3>
+<h4 id="引入光滑函数芽上的等价类">引入：光滑函数芽上的等价类</h4>
+<h4 id="余切空间与切空间">余切空间与切空间</h4>
+<hr>
+<h3 id="子流形">子流形</h3>
+<hr>
+<h3 id="弗洛贝尼乌斯定理">弗洛贝尼乌斯定理</h3>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Differential Geometry</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/30/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-书籍推荐" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -283,170 +447,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2022/04/30/%E5%A4%8D%E7%8E%B0%E8%AE%A1%E5%88%92/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-微分几何讲义学习笔记（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/29/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">微分几何讲义学习笔记（1）</a>
-    </h1>
-  
-
-        
-        <a href="/2022/04/29/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2022-04-29T05:19:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="目录">目录</h3>
-<p>1、回顾：实结构</p>
-<p>2、微分流形</p>
-<p>3、实例</p>
-<p>4、切空间</p>
-<p>5、子流形</p>
-<p>6、弗洛贝尼乌斯定理（Frobenius' Theorem）</p>
-<h3 id="回顾实结构">回顾：实结构</h3>
-<p>在开始进入流形的具体概念之前，我们先复习一遍分析和代数中关于实空间度量和拓扑的基本观点。</p>
-<p>我们使用<span class="math inline">\(\R\)</span>来表示实数域。令 <span class="math display">\[
-\R^m\;=\;\{\textbf x = (x^1,x^2,...,x^m)|x^i\in\R,\;1\le i\le m\}
-\]</span> 这是m维实数元组的集合。数字<span class="math inline">\(x^i\)</span>称为元素<span class="math inline">\(\textbf x \in
-\R^m\)</span>的第i坐标分量。对于任意的<span class="math inline">\(x,y\in
-\R^m,a\in \R\)</span>，我们有 <span class="math display">\[
-(x+y)^i=x^i+y^i\\
-(ax)^i=ax^i
-\]</span> 这定义了集合<span class="math inline">\(\R^m\)</span>中的加法和标量积，因而使得其成为一个R上的m维向量空间。</p>
-<p>除了线性结构，<span class="math inline">\(\R^m\)</span>​也有标准拓扑结构。如定义 <span class="math display">\[
-d(x,y)=\sqrt{\sum^m_{i=1} (x^i-y^i)^2}\;\;\;\;\;\;,x,y\in \R^m
-\]</span> 显见d为一度量。因而<span class="math inline">\((\R^m,d)\)</span>为一度量空间。在<span class="math inline">\(\R^m\)</span>上由d诱导出的拓扑便称为自然拓扑。因而其具有自然拓扑结构。配备有度量d的m维向量空间<span class="math inline">\(\R^m\)</span>称为m维欧几里得空间（Euclidean
-Space）</p>
-<p>设f是一个定义在m维欧几里得空间的某开子集U上的函数。如果对于一个正整数r，和任意的k<span class="math inline">\(\le\)</span>r，f的k阶任意偏导数都存在且连续，那么我们说f属于U上的r阶连续可微类，记作<span class="math inline">\(f\in C^r(U)\)</span>。如果对于任意正整数r都有<span class="math inline">\(f\in
-C^r(U)\)</span>,那么我们说f属于U上的光滑函数类，记作<span class="math inline">\(f\in
-C^\infin(U)\)</span>。如果f是解析的，也就是说，如果f在属于U的每个点的某个邻域内都可以表示成幂级数，那么我们说f属于U上的解析函数类，记作<span class="math inline">\(f\in C^\omega(U)\)</span></p>
-<p>以上基本概念相信我们已经非常熟悉了。下面介绍流形的定义和概念。</p>
-<h3 id="微分流形">微分流形</h3>
-<p>要问微分几何研究的主要对象是什么，那必定是微分流形无疑。微分流形是建立在流形的基础上的，所以我们先来讲讲流形的概念。</p>
-<p>流形是黎曼在研究微分几何时引入的概念，我们说一个集合是一个流形，大体上的意思是讲这个集合是有若干片欧几里得空间“拼接”而成。</p>
-<h5 id="定义1流形">定义1：流形</h5>
-<p>设M是豪斯多夫空间（Hausdorff Space），如果<span class="math inline">\(\forall p \in M,\exist
-U(p)是p的邻域\)</span>,使得U同胚于<span class="math inline">\(\R^m\)</span>的某个开子集，那么我们说M是一个m维流形（manifold）或m维拓扑流形。</p>
-<p>设上述定义中的同胚映射是<span class="math inline">\(\varphi_U:U\to\varphi_U(U)\)</span>，此处<span class="math inline">\(\varphi_U\)</span>（U）是m维欧几里得空间中的开集。那么我们称<span class="math inline">\((U,\varphi_U)\)</span>是M的一个坐标卡。由于<span class="math inline">\(\varphi_U\)</span>是同胚，我们可以定义U中元素y的坐标为
-<span class="math display">\[
-u^i = (\varphi_U(y))^i \;\;\;\;i=1,2,...,m
-\]</span> 其中的u，我们称为y的本地坐标或局部坐标。</p>
-<p>设<span class="math inline">\((U,\varphi_U),(V,\varphi_V)\)</span>​是两个坐标卡，如果U和V的交不空，那么<span class="math inline">\(\varphi_U(U\cap V)\)</span>​和<span class="math inline">\(\varphi_V(U\cap
-V)\)</span>​都是^m里的非空开集。映射$ _U_V^{-1} <span class="math inline">\(​就是定义在\)</span>_U(UV)<span class="math inline">\(​上，到\)</span>_V(UV)$​的函数，易见该函数是双射，设它为f，其反函数为g，那么
-<span class="math display">\[
-y=f(x)\\
-x=g(y)
-\]</span> 又有 <span class="math display">\[
-f(g(y))=y\\
-g(f(x))=x
-\]</span> 对于两个坐标卡<span class="math inline">\((U,\varphi_U)\)</span>,<span class="math inline">\((V,\varphi_V)\)</span>，我们说他们是<span class="math inline">\(C^r\)</span>相容的，指的是要么<span class="math inline">\(U\cap V = \varnothing\)</span>，
-要么f和g都是r次连续可微类（注意f和g都是实集上的函数，所以可微性是已经定义好的）。</p>
-<h5 id="定义2微分结构">定义2：微分结构</h5>
-<p>设M是一个m维流形。如果对于一个M上的坐标卡集合<span class="math inline">\(\mathcal A\)</span>满足以下条件，那么我们称<span class="math inline">\(\mathcal A\)</span>
-是一个M上的r次可微类微分结构（<span class="math inline">\(C^r\)</span>-differentiable structure）:</p>
-<p>(1){U,V,W,...}是一个M上的开覆盖。</p>
-<p>(2)任何两个坐标卡都是<span class="math inline">\(C^r\)</span>相容的。</p>
-<p>(3)<span class="math inline">\(\mathcal
-A\)</span>是极大的。也就是说，任何一个坐标卡如果它于任何<span class="math inline">\(\mathcal A\)</span> 中的坐标卡都<span class="math inline">\(C^r\)</span>相容，那么它必属于<span class="math inline">\(\mathcal A\)</span>。</p>
-<p>具有r阶可微类微分结构的集合M叫做r次可微微分流形，其中的坐标卡叫做M的相容坐标卡。M中点p的局部坐标系统，从现在起将总是从包含p的相容坐标卡中作出的。</p>
-<p>我们容易看出，微分流形结构中的前两条都是基本的。不难验证，如果一个坐标卡集<span class="math inline">\(\mathcal
-A&#39;\)</span>满足前两个条件，那么对于任意一个正整数s，<span class="math inline">\(0&lt;s\le
-r\)</span>,都存在唯一一个s可微微分结构<span class="math inline">\(\mathcal A\)</span>,使得<span class="math inline">\(\mathcal A&#39; \subset \mathcal
-A\)</span>。这个微分结构<span class="math inline">\(\mathcal
-A\)</span>是由<span class="math inline">\(\mathcal A&#39;\)</span>
-唯一决定的。因此要产生一个r次微分结构，只需要指明一个相容的开覆盖坐标卡即可。</p>
-<p>注：我们提及的流形M将总是假设为第二可数的。</p>
-<p>如果在M上给定了一个<span class="math inline">\(\infin\)</span>阶微分结构，那么我们称M为一个光滑流形。如果给定了一个<span class="math inline">\(C^\omega\)</span>微分结构，那么我们称M为一个解析流形。我们最感兴趣的是光滑流形，因而当我们没有特意提及时，总是假定指定的流形是微分流形。</p>
-<p>定义了流形和微分结构之后，我们还缺乏结构上或结构之间的联系，所以我们还需要定义流形上或流形之间函数的可微性和积流形的概念。</p>
-<p>在光滑流形上，光滑函数的概念是良好定义的。注意到M上的函数f和局部坐标函数的反函数<span class="math inline">\(\varphi_U^{-1}\)</span>的复合是一个从 <span class="math inline">\(\R^m\)</span>到 <span class="math inline">\(\R^m\)</span>的映射，而且对于任意其它的坐标卡<span class="math inline">\(\varphi_V\)</span>,总有<span class="math inline">\(f\circ \varphi_V^{-1} = f\circ \varphi_U^{-1}
-\circ (\varphi_U \circ
-\varphi_V^{-1})\)</span>，所以我们看出这个复合函数的可微性是和坐标卡选择无关的，因而可以找出f可微性和光滑性的定义。</p>
-<p>实值光滑函数只不过是光滑流形间光滑函数的特例。</p>
-<h5 id="定义3光滑函数">定义3：光滑函数</h5>
-<p>设<span class="math inline">\(f：M\to
-N\)</span>是连续映射，其中M和N都是光滑流形。且dim（M）=m，dim（N）=n。如果在<span class="math inline">\(p\in M\)</span>处存在相容坐标卡<span class="math inline">\((U,\varphi_U)\)</span>，且在f（p）处也存在相容坐标卡<span class="math inline">\((V,\varphi_V)\)</span>,使得映射 <span class="math display">\[
-\psi_V\circ f\circ \varphi_U^{-1}:\varphi_U(U)\to\psi_V(V)
-\]</span> 在点<span class="math inline">\(\varphi_U(p)\)</span>是光滑的，那么f在p点被叫做<span class="math inline">\(C^\infin\)</span>
-的。如果映射f在M上的每一点都是<span class="math inline">\(C^\infin\)</span>
-的，那么f被称为M上的光滑函数。</p>
-<p>在m=n的情形下，如果f是一个同胚映射且<span class="math inline">\(f\)</span>和<span class="math inline">\(f^{-1}\)</span>都是光滑函数，那么f被称为一个微分同胚映射。如果M和N是微分同胚，那么我们说它们对应的光滑微分结构是同构的。稍后我们会见到，在米勒球的例子中，两个微分结构是同胚但不同构的。</p>
-<p>另一个重要的例子是所谓的流形上的参数曲线。M是流形<span class="math inline">\(（a，b）\subset R\)</span>，那么f：<span class="math inline">\(M\to N\)</span>就是N上的一个参数曲线。</p>
-<h5 id="定义4积流形">定义4：积流形</h5>
-<p>（积流形定义待补充）</p>
-<hr>
-<h3 id="实例">实例</h3>
-<h5 id="m1维球面">m+1维球面</h5>
-<h5 id="m维射影空间p_m">m维射影空间（<span class="math inline">\(P_m\)</span>）</h5>
-<h5 id="米勒球milnors-sphere">米勒球（Milnor's Sphere）</h5>
-<hr>
-<h3 id="切空间">切空间</h3>
-<h4 id="引入光滑函数芽上的等价类">引入：光滑函数芽上的等价类</h4>
-<h4 id="余切空间与切空间">余切空间与切空间</h4>
-<hr>
-<h3 id="子流形">子流形</h3>
-<hr>
-<h3 id="弗洛贝尼乌斯定理">弗洛贝尼乌斯定理</h3>
-<hr>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Differential Geometry</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/29/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">展开全文 >></a>
         </p>
       
 
@@ -1555,19 +1555,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Books</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
+                <a href="javascript:void(0)" class="js-tag color1">Books</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Impossible Misson</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
               </li>
              
               <li class="article-tag-list-item">
