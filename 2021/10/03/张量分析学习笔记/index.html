@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>张量分析学习笔记 | KIKIada&#39;s ugly home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="那么这里是张量分析 张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量 张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。  矢量的基本知识 三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。 矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3">
+  <meta name="description" content="那么这里是张量分析 张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量 张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。  矢量的基本知识 三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。 矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3矢量的全体对矢量和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="张量分析学习笔记">
 <meta property="og:url" content="http://example.com/2021/10/03/%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="KIKIada&#39;s ugly home">
-<meta property="og:description" content="那么这里是张量分析 张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量 张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。  矢量的基本知识 三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。 矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3">
+<meta property="og:description" content="那么这里是张量分析 张量，tensor，重要分析工具，不可不品尝。 不多说，开干！  （一）什么是张量 张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。  矢量的基本知识 三维Euclidean空间中，矢量是具有大小与方向且满足一定规则的实体。矢量具有相等关系，大小与方向均相同的矢量相等。 矢量的和按照平行四边形法则进行合成。矢量和满足交换律和结合律。R3矢量的全体对矢量和">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-03T07:38:14.000Z">
 <meta property="article:modified_time" content="2021-10-02T16:47:46.444Z">
@@ -181,7 +181,7 @@
 <p>张量，tensor，重要分析工具，不可不品尝。</p>
 <p>不多说，开干！</p>
 <hr>
-<h3 id="一什么是张量">（一）什么是张量</h3>
+<h3 id="（一）什么是张量">（一）什么是张量</h3>
 <p>张量是个很神奇的东西，在学习张量之前，我们有必要复习一下关于矢量的知识。</p>
 <hr>
 <h4 id="矢量的基本知识">矢量的基本知识</h4>
@@ -190,104 +190,117 @@
 <p>矢量的数乘按照矢量的倍数和定义，且满足分配律。</p>
 <p>矢量空间具有封闭性，这是说矢量空间中任意矢量的线性组合依然是该空间中的矢量。</p>
 <p>一个矢量空间中最大线性无关矢量组所包含的矢量数称为该矢量空间的维数，包含维数个线性无关矢量的矢量组可以作为该空间的一组基底，这是说任意该空间中的矢量均可以表达为这组矢量的线性组合。</p>
-<p>矢量的点积是指矢量模与其夹角余弦之积，结果为实数，满足交换律、分配律、正定性和施瓦茨不等式。矢量的叉积的结果是矢量，该矢量与两运算矢量所在平面垂直，按照坐标系的定向来定向。叉积满足反交换律、分配律，不满足结合律。二重叉积满足
-<span class="math display">\[
-u \times (v \times w) = (u\cdot w)v-(u\cdot v)w
-\]</span></p>
+<p>矢量的点积是指矢量模与其夹角余弦之积，结果为实数，满足交换律、分配律、正定性和施瓦茨不等式。矢量的叉积的结果是矢量，该矢量与两运算矢量所在平面垂直，按照坐标系的定向来定向。叉积满足反交换律、分配律，不满足结合律。二重叉积满足<br>
+$$<br>
+u \times (v \times w) = (u\cdot w)v-(u\cdot v)w<br>
+$$</p>
 <p>由此可见，叉积不满足结合律。</p>
-<p>矢量的混合积是指 <span class="math display">\[
-\begin{align}
-[u\; v\; w]&amp;=(u\times v)\cdot w=u\cdot (v\times w)\\
-&amp;=\begin{bmatrix}
-u_{x}&amp;u_{y}&amp;u_{z}\\
-v_{x}&amp;v_{y}&amp;v_{z}\\
-w_{x}&amp;w_{y}&amp;w_{z}
-\end{bmatrix}
-=\begin{bmatrix}
-u_{x}&amp;v_{x}&amp;w_{x}\\
-u_{y}&amp;v_{y}&amp;w_{y}\\
-u_{z}&amp;v_{z}&amp;w_{z}
-\end{bmatrix}
-\end{align}
-\]</span> 混合积换序应满足 <span class="math display">\[
-\begin{align}
-[u\; v\; w]&amp;=[v\; w\; u]=[w\; u\; v]\\&amp;=-[v\; u\; w]=-[u\; w\;
-v]=-[w\; v\; u]
-\end{align}
-\]</span>
+<p>矢量的混合积是指<br>
+$$<br>
+\begin{align}<br>
+[u; v; w]&amp;=(u\times v)\cdot w=u\cdot (v\times w)\<br>
+&amp;=\begin{bmatrix}<br>
+u_{x}&amp;u_{y}&amp;u_{z}\<br>
+v_{x}&amp;v_{y}&amp;v_{z}\<br>
+w_{x}&amp;w_{y}&amp;w_{z}<br>
+\end{bmatrix}<br>
+=\begin{bmatrix}<br>
+u_{x}&amp;v_{x}&amp;w_{x}\<br>
+u_{y}&amp;v_{y}&amp;w_{y}\<br>
+u_{z}&amp;v_{z}&amp;w_{z}<br>
+\end{bmatrix}<br>
+\end{align}<br>
+$$<br>
+混合积换序应满足<br>
+$$<br>
+\begin{align}<br>
+[u; v; w]&amp;=[v; w; u]=[w; u; v]\&amp;=-[v; u; w]=-[u; w; v]=-[w; v; u]<br>
+\end{align}<br>
+$$<br>
 在线性代数中我们已经了解，混合积的意义是以u、v、w三个矢量为棱边的平行六面体的体积，上式还说明了u、v、w构成右手系时体积为正。</p>
-<p>由上式易知： <span class="math display">\[
-[u\; v\; w][u&#39;\; v&#39;\; w&#39;]=\begin{bmatrix}
-u\cdot u&#39;&amp;u\cdot v&#39;&amp;u\cdot w&#39;\\
-v\cdot u&#39;&amp;v\cdot v&#39;&amp;v\cdot w&#39;\\
-w\cdot u&#39;&amp;w\cdot v&#39;&amp;w\cdot w&#39;
-\end{bmatrix}
-\]</span></p>
+<p>由上式易知：<br>
+$$<br>
+[u; v; w][u’; v’; w’]=\begin{bmatrix}<br>
+u\cdot u’&amp;u\cdot v’&amp;u\cdot w’\<br>
+v\cdot u’&amp;v\cdot v’&amp;v\cdot w’\<br>
+w\cdot u’&amp;w\cdot v’&amp;w\cdot w’<br>
+\end{bmatrix}<br>
+$$</p>
 <hr>
 <p>回顾完矢量，我们再说坐标系。我们从微积分初步里面可以了解到，坐标系永远不是本质的，只能在某种程度上作为方便我们研究的参照。由此可见，只具有正交坐标轴的笛卡尔坐标系远远不能满足我们日益复杂的参照需求。那么我们从矢量基底的角度来研究一下坐标系。</p>
 <hr>
 <h3 id="斜角直线坐标系">斜角直线坐标系</h3>
-<p>取平面内的两直线<span class="math inline">\(x^{1}\)</span>,<span class="math inline">\(x^{2}\)</span>,坐标线互不相交且夹角为<span class="math inline">\(\phi\)</span>。若选用沿<span class="math inline">\(x^{1}\)</span>与<span class="math inline">\(x^{2}\)</span>坐标线的参考矢量<span class="math inline">\(\textbf{g}_{1}\)</span>与<span class="math inline">\(\textbf{g}_{2}\)</span>(他们可以不是单位矢量)，则任意矢量P可以表示为：
-<span class="math display">\[
-\textbf{P} =P^{1}\textbf{g}_{1}+P^{2}\textbf{g}_{2}=\Sigma^{2}_{\alpha
-=1}P^{\alpha}\textbf{g}_{\alpha}=P^{\alpha}\textbf{g}_{\alpha}
-\]</span> 此处约定俗成地使用了爱因斯坦求和约定，<span class="math inline">\(\alpha\)</span>称为哑指标，满足以下规则：</p>
-<h5 id="哑指标求和规则">哑指标求和规则：</h5>
+<p>取平面内的两直线$x<sup>{1}$,$x</sup>{2}$,坐标线互不相交且夹角为$\phi$。若选用沿$x<sup>{1}$与$x</sup>{2}$坐标线的参考矢量$\textbf{g}<em>{1}$与$\textbf{g}</em>{2}$(他们可以不是单位矢量)，则任意矢量P可以表示为：<br>
+$$<br>
+\textbf{P} =P<sup>{1}\textbf{g}_{1}+P</sup>{2}\textbf{g}<em>{2}=\Sigma^{2}</em>{\alpha =1}P<sup>{\alpha}\textbf{g}_{\alpha}=P</sup>{\alpha}\textbf{g}_{\alpha}<br>
+$$<br>
+此处约定俗成地使用了爱因斯坦求和约定，$\alpha$称为哑指标，满足以下规则：</p>
+<h5 id="哑指标求和规则：">哑指标求和规则：</h5>
 <p>（1）在同一项中，同一个字母以上标和下标成对出现，表示按照该指标遍历求和。</p>
 <p>（2）哑指标为黏附变元，本身并无意义，只有用作求和时才有标记的意义。亦即求和结果与哑指标选取无关。</p>
-<p>当选定参考基矢量之后，可以用初等代数的方法来确定任意矢量P的分矢量<span class="math inline">\(P^{1}\)</span>,<span class="math inline">\(P^{2}\)</span>。设引入<span class="math inline">\(x^{1}\)</span>,<span class="math inline">\(x^{2}\)</span>的单位矢量为i1、i2，则有 <span class="math display">\[
-i_{1}\cdot i_{1}=i_{2}\cdot i_{2}=1\\
-i_{1}\cdot i_{2}=i_{2}\cdot i_{1}=0\\
-\textbf{g}_{1}=g_{1}i_{1},\textbf{g}_{2}=g_{2}i_{2}
-\]</span> 与笛卡尔坐标系不同，因为<span class="math inline">\(g_{1}\)</span>,<span class="math inline">\(g_{2}\)</span>矢量不为单位矢量且不正交，故矢量P在<span class="math inline">\(\textbf{g}_{\alpha}\)</span>上的投影不等于它的分量：
-<span class="math display">\[
-P\cdot i_{1}=P^{1}\ |\textbf{g}_{1}|
-+P^{2}\ |\textbf{g}_{2}|\cos{\phi}\\
-P\cdot i_{2}=P^{1}\ |\textbf{g}_{1}|\cos{\phi} +P^{2}\ |\textbf{g}_{2}|
-\]</span>
-这样表述P的分量的方法需要通过联立解以上代数方程来计算，这非常不方便，因而为求能够方便的表示分量，我们引入一对与<span class="math inline">\(\textbf{g}_{\alpha}\)</span>对偶的参考矢量<span class="math inline">\(\textbf{g}^{\alpha}\)</span>，满足： <span class="math display">\[
-\textbf{g}^{1}\cdot \textbf{g}_{2}=\textbf{g}^{2}\cdot
-\textbf{g}_{1}=0\\
-\textbf{g}^{1}\cdot \textbf{g}_{1}=\textbf{g}^{2}\cdot \textbf{g}_{2}=0
-\]</span></p>
-<p>称原来的下标矢量为协变基矢量，上标矢量为逆变基矢量。上式可统一写成对偶条件
-<span class="math display">\[
-\textbf{g}^{\beta}\cdot\textbf{g}_{\alpha}=\delta^{\beta}_{\alpha}
-\]</span> 式右侧为克罗内克算符。</p>
-<p>由上式可知协变基矢量和逆变基矢量都是互相唯一确认的。以后对于每个坐标系都引入这样的对偶基矢量，并用上标和下标的方式确认协变和逆变指标。利用它们可以方便地求矢量的分量而不用解复杂的方程。如
-<span class="math display">\[
-P^{1}=\textbf{P}\cdot\textbf{g}^{1}\\
-P^{2}=\textbf{P}\cdot\textbf{g}^{2}
-\]</span> 故我们现在有了若干个同一矢量关于协变基和逆变基的分解： <span class="math display">\[
-P=P^1g_1+P^2g_2\\
-P^{1}=\textbf{P}\cdot\textbf{g}^{1}\\
-P^{2}=\textbf{P}\cdot\textbf{g}^{2}\\
-P=P_1g^1+P_2g^2\\
-P_1=\textbf{P}\cdot\textbf{g}_{1}\\
-P_{2}=\textbf{P}\cdot\textbf{g}_{2}
-\]</span></p>
+<p>当选定参考基矢量之后，可以用初等代数的方法来确定任意矢量P的分矢量$P<sup>{1}$,$P</sup>{2}$。设引入$x<sup>{1}$,$x</sup>{2}$的单位矢量为i1、i2，则有<br>
+$$<br>
+i_{1}\cdot i_{1}=i_{2}\cdot i_{2}=1\<br>
+i_{1}\cdot i_{2}=i_{2}\cdot i_{1}=0\<br>
+\textbf{g}<em>{1}=g</em>{1}i_{1},\textbf{g}<em>{2}=g</em>{2}i_{2}<br>
+$$<br>
+与笛卡尔坐标系不同，因为$g_{1}$,$g_{2}$矢量不为单位矢量且不正交，故矢量P在$\textbf{g}<em>{\alpha}$上的投影不等于它的分量：<br>
+$$<br>
+P\cdot i</em>{1}=P^{1}\ |\textbf{g}<em>{1}|<br>
++P^{2}\ |\textbf{g}</em>{2}|\cos{\phi}\<br>
+P\cdot i_{2}=P^{1}\ |\textbf{g}<em>{1}|\cos{\phi} +P^{2}\ |\textbf{g}</em>{2}|<br>
+$$<br>
+这样表述P的分量的方法需要通过联立解以上代数方程来计算，这非常不方便，因而为求能够方便的表示分量，我们引入一对与$\textbf{g}<em>{\alpha}$对偶的参考矢量$\textbf{g}^{\alpha}$，满足：<br>
+$$<br>
+\textbf{g}^{1}\cdot \textbf{g}</em>{2}=\textbf{g}^{2}\cdot \textbf{g}<em>{1}=0\<br>
+\textbf{g}^{1}\cdot \textbf{g}</em>{1}=\textbf{g}^{2}\cdot \textbf{g}_{2}=0<br>
+$$</p>
+<p>称原来的下标矢量为协变基矢量，上标矢量为逆变基矢量。上式可统一写成对偶条件<br>
+$$<br>
+\textbf{g}<sup>{\beta}\cdot\textbf{g}_{\alpha}=\delta</sup>{\beta}_{\alpha}<br>
+$$<br>
+式右侧为克罗内克算符。</p>
+<p>由上式可知协变基矢量和逆变基矢量都是互相唯一确认的。以后对于每个坐标系都引入这样的对偶基矢量，并用上标和下标的方式确认协变和逆变指标。利用它们可以方便地求矢量的分量而不用解复杂的方程。如<br>
+$$<br>
+P<sup>{1}=\textbf{P}\cdot\textbf{g}</sup>{1}\<br>
+P<sup>{2}=\textbf{P}\cdot\textbf{g}</sup>{2}<br>
+$$<br>
+故我们现在有了若干个同一矢量关于协变基和逆变基的分解：<br>
+$$<br>
+P=P<sup>1g_1+P</sup>2g_2\<br>
+P<sup>{1}=\textbf{P}\cdot\textbf{g}</sup>{1}\<br>
+P<sup>{2}=\textbf{P}\cdot\textbf{g}</sup>{2}\<br>
+P=P_1g<sup>1+P_2g</sup>2\<br>
+P_1=\textbf{P}\cdot\textbf{g}<em>{1}\<br>
+P</em>{2}=\textbf{P}\cdot\textbf{g}_{2}<br>
+$$</p>
 <hr>
 <h4 id="三维空间中的斜角直线坐标系">三维空间中的斜角直线坐标系</h4>
 <p>1、斜角直线坐标系</p>
-<p>在三维空间中的斜角直线坐标系是二维形式的自然推广。三维空间中每一点用<span class="math inline">\((x^1,x^2.x^3)\)</span>表示。显而易见的，三族坐标线是空间斜交的。</p>
-<p>三维空间斜角坐标规定了以后，它的径矢也自然而然地确定了，即<span class="math inline">\(r=x^ig_i\)</span></p>
+<p>在三维空间中的斜角直线坐标系是二维形式的自然推广。三维空间中每一点用$(x<sup>1,x</sup>2.x^3)$表示。显而易见的，三族坐标线是空间斜交的。</p>
+<p>三维空间斜角坐标规定了以后，它的径矢也自然而然地确定了，即$r=x^ig_i$</p>
 <p>2、协变基矢量</p>
-<p>在上面的径矢表达式中对坐标微分有 <span class="math display">\[
-dr=\frac{\partial r}{\partial x^i}dx^i=g_idx^i
-\]</span> 将径矢对坐标的偏导数定义为协变基矢量，称为自然基矢量，即<span class="math inline">\(g_i=\frac{\partial r}{\partial x^i}\)</span></p>
-<p>协变基矢量的方向沿着坐标线正方向，其大小等于当坐标<span class="math inline">\(x^i\)</span>有单位增量的时候两点之间的距离。因为三个坐标线非共面，故三者基矢量的混合积不为0，当组成右手系时，混合积为正值。</p>
+<p>在上面的径矢表达式中对坐标微分有<br>
+$$<br>
+dr=\frac{\partial r}{\partial x<sup>i}dx</sup>i=g_idx^i<br>
+$$<br>
+将径矢对坐标的偏导数定义为协变基矢量，称为自然基矢量，即$g_i=\frac{\partial r}{\partial x^i}$</p>
+<p>协变基矢量的方向沿着坐标线正方向，其大小等于当坐标$x^i$有单位增量的时候两点之间的距离。因为三个坐标线非共面，故三者基矢量的混合积不为0，当组成右手系时，混合积为正值。</p>
 <p>3、逆变基矢量</p>
 <p>定义满足对偶条件的逆变基矢量，满足克罗内克条件。</p>
-<p>今后可以证明，逆变基矢量实际上是垂直于某坐标的等值面的梯度 <span class="math display">\[
-\textbf{g}^i=gradx^i=\nabla x^i
-\]</span> 4、由协变基矢量求逆变基矢量</p>
+<p>今后可以证明，逆变基矢量实际上是垂直于某坐标的等值面的梯度<br>
+$$<br>
+\textbf{g}<sup>i=gradx</sup>i=\nabla x^i<br>
+$$<br>
+4、由协变基矢量求逆变基矢量</p>
 <p>逆变基矢量根据对偶条件由协变基矢量唯一确定。具体有两种计算方法：</p>
-<p>法1： <span class="math display">\[
-因为g^1垂直于g_2和g_3，可令g^1=ag^2\times g^3，由对偶条件，求得\\
-g^1=\frac{1}{\sqrt{g}} (g_2\times g_3)\\
-g^2=\frac{1}{\sqrt{g}} (g_3\times g_1)\\
-g^3=\frac{1}{\sqrt{g}} (g_1\times g_2)
-\]</span></p>
+<p>法1：<br>
+$$<br>
+因为g<sup>1垂直于g_2和g_3，可令g</sup>1=ag^2\times g^3，由对偶条件，求得\<br>
+g^1=\frac{1}{\sqrt{g}} (g_2\times g_3)\<br>
+g^2=\frac{1}{\sqrt{g}} (g_3\times g_1)\<br>
+g^3=\frac{1}{\sqrt{g}} (g_1\times g_2)<br>
+$$</p>
 
       
 
@@ -556,15 +569,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -572,7 +577,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Impossible Misson</a>
+                <a href="javascript:void(0)" class="js-tag color2">Programming</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,6 +590,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Differential Geometry</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Impossible Misson</a>
               </li>
              
               <li class="article-tag-list-item">
