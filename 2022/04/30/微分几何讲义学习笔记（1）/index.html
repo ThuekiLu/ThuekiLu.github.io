@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://example.com/2022/04/30/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/manifold2.png">
 <meta property="og:image" content="http://example.com/2022/04/30/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/manifold3.png">
 <meta property="article:published_time" content="2022-04-30T06:19:33.000Z">
-<meta property="article:modified_time" content="2022-04-30T13:55:13.168Z">
+<meta property="article:modified_time" content="2022-05-01T07:26:15.334Z">
 <meta property="article:author" content="KIKIada">
 <meta property="article:tag" content="Differential Geometry">
 <meta name="twitter:card" content="summary">
@@ -297,7 +297,7 @@ x^1 = -\sqrt{1-(x^2)^2}\;&lt;0
 <p>可见二者都是<span class="math inline">\(C^\infin\)</span>的，因而这两个坐标卡是<span class="math inline">\(C^\infin\)</span>
 相容的。类似的，其它坐标卡之间的关系也可以类似作出。因而我们断定，这些坐标卡组成的微分结构使得<span class="math inline">\(S^1\)</span>成为一个一维光滑流形。m&gt;1时的微分结构可以类似得出，留给大家自证。</p>
 <h5 id="m维射影空间p_m">m维射影空间（<span class="math inline">\(P_m\)</span>）</h5>
-<p>射影空间是我们已经在代数和几何中熟知的空间。我们来分析m维射影空间P_m的微分结构。</p>
+<p>射影空间是我们已经在代数和几何中熟知的空间。我们来分析m维射影空间<span class="math inline">\(P_m\)</span>的微分结构。</p>
 <p>在<span class="math inline">\(\R^{m+1}-{0}\)</span>中定义关系<span class="math inline">\(\sim\)</span>，使<span class="math inline">\(x\sim
 y\)</span>当且仅当存在一个实数a使得x=ay。容易看出来，<span class="math inline">\(\sim\)</span>是一个等价关系。记x的等价类为<span class="math inline">\([x]=[x^i]\)</span>,那么m维射影空间定义为 <span class="math display">\[
 \begin{align}
@@ -320,11 +320,78 @@ _j\xi_i = \frac{1}{_i\xi_j}
 \end{cases}
 \]</span> <img src="/2022/04/30/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%AE%B2%E4%B9%89%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/manifold3.png"></p>
 <p>容易验证，这是一个<span class="math inline">\(P_m\)</span>上的光滑微分结构。</p>
-<h5 id="米勒球milnors-sphere">米勒球（Milnor's Sphere）</h5>
+<h5 id="米尔诺球milnors-sphere">米尔诺球（Milnor's Sphere）</h5>
 <hr>
 <h3 id="切空间">切空间</h3>
 <h4 id="引入光滑函数芽上的等价类">引入：光滑函数芽上的等价类</h4>
+<p>在一个正则曲线（或曲面）上的任何一个点我们都可以指出切线（或是切平面）的概念。与之类似，在拓扑流形上给定一个微分结构，我们可以用一个线性空间近似任何一点的邻域。更准确的说，我们将使用切空间和余切空间。</p>
+<p>设M是一个m维光滑流形。给定一个点<span class="math inline">\(p\in
+M\)</span>
+，设f在p的一个邻域内是光滑的。我们将所有的这些函数的集合记作<span class="math inline">\(C^\infin_p\)</span>
+。自然，其中任意两个函数的定义域都可能是不同的，但是在其中的函数的加法和乘法运算依旧是良好定义的，只需将结果函数的定义域限制在两函数的定义域的交集上去即可。</p>
+<p>在如上的集合中定义一个关系<span class="math inline">\(\sim\)</span>
+如下：设<span class="math inline">\(f,g\in C^\infin_p, then\; f \sim
+g\;\;\iff\;\; \exist H(p) \;s.t.\; f|_H = g|_H\)</span>。显然<span class="math inline">\(\sim\)</span>
+是一个等价关系。按照这个等价关系划分<span class="math inline">\(C^\infin_p\)</span>​
+等价类[f]，这个商空间就叫做p点处的光滑函数芽。即： <span class="math display">\[
+\mathcal F_p=C^\infin_p/\sim=\{[f]|f\in C^\infin_p\}
+\]</span>
+可以定义函数芽中的加法和标量积运算，从而使得该光滑函数芽成为<span class="math inline">\(\R\)</span>上的线性空间。大家自行验证其为无穷维线性空间。</p>
+<p>设<span class="math inline">\(\gamma\)</span>
+是M上过点p的参数曲线。<span class="math inline">\(i.e. \exist
+\delta&gt;0,\;s.t.\;\gamma:(-\delta,\delta)\to
+M\)</span>是一个光滑映射同时<span class="math inline">\(\gamma
+(0)=p\)</span>。将所有这样的参数曲线的集合记为<span class="math inline">\(\Gamma_p\)</span>。</p>
+<p>对于任意的<span class="math inline">\(\gamma \in \Gamma_p\)</span> 和
+<span class="math inline">\([f]\in \mathcal F_p\)</span>,令 <span class="math display">\[
+&lt;&lt;\gamma, [f]&gt;&gt;\;=\;\frac{\mathrm d (f\circ \gamma)}{\mathrm
+d t}|_{t=0},\;\;-\delta&lt;t&lt;\delta
+\]</span> 容易看出，上式对于给定的<span class="math inline">\(\gamma\)</span>
+，其值只取决于对于等价类[f]的选取。同时算符&lt;&lt;,&gt;&gt;对于第二变元也是线性的。</p>
+<p>令 <span class="math display">\[
+\mathcal H_p = \{[f]\in \mathcal
+F_p|&lt;&lt;\gamma,[f]&gt;&gt;=0,\forall \gamma\in \Gamma_p\}
+\]</span> 容易验证<span class="math inline">\(\mathcal
+H_p\)</span>是<span class="math inline">\(\mathcal
+F_p\)</span>的线性子空间。</p>
+<h5 id="定理1">定理1</h5>
+<p><span class="math display">\[
+设[f]\in \mathcal F_p,对于容许坐标卡(U,\varphi_U)令:\\
+F(x^1,...,x^m)=f\circ \varphi_U^{-1}(x^1,...,x^m)\\
+那么[f]\in\mathcal H_p \iff\frac{\part F}{\part x^i}|_{\varphi_U(p)} =
+0\;\;,1\le i\le m
+\]</span></p>
+<p>使用本地坐标表示，直接求导易证。</p>
+<p>这个定理表明，<span class="math inline">\(\mathcal H_p\)</span>
+中的元素实际上都是那些在局部坐标系中的p点的所有偏导数都为0
+的函数类组成。</p>
+<p>接着我们进入余切空间和切空间的表示。</p>
 <h4 id="余切空间与切空间">余切空间与切空间</h4>
+<h5 id="定义1余切空间">定义1：余切空间</h5>
+<p><span class="math display">\[
+商空间\mathcal F_p/\mathcal
+H_p叫做M上p点的余切空间，记作T^*_p(或T^*_p(M))。\\\mathcal
+H_p中的函数芽[f]的等价类被记作\tilde
+{[f]}(或(df)_p)，被称为M上p点的余切向量。
+\]</span></p>
+<p>容易看到，余切空间也是线性空间。</p>
+<p>我们已经离完整描述相当接近了，接下来给出链法则。</p>
+<h5 id="定理2链法则">定理2：链法则</h5>
+<p><span class="math display">\[
+设f^1,f^2,...,f^m\in
+C^\infin_p,F(y^1,...,y^m)是点f_p的邻域内的光滑函数，其中f_p =
+(f^1(p),f^2(p),...,f^m(p)),\\
+那么f=F(f^1,f^2,...,f^m)\in \R^m，且(df)_p=\sum^m_{i=1}[(\frac{\part
+F}{\part f^i}(f^1(p),f^2(p),...,f^m(p)))\; \dot \;(df^i)_p]
+\]</span></p>
+<p>证明较为直接，只要注意<span class="math inline">\((df)_p = (dg)_p
+\iff [f]-[g] \in \mathcal H_p\)</span>即可。</p>
+<p>该定理给出的形式近似于我们在多元微分学中看到的链式法则，我们会在后面的学习中看到两者形式间的关系。</p>
+<p>根据此定理，我们可以较为方便的计算出一些余切向量间的关系，例如 <span class="math display">\[
+d(fg)_p = f(p)\dot\;(dg)_p+g(p)\dot\;(df)_p
+\]</span> 而且我们可以得出推论，余切空间是一个m维向量空间。</p>
+<h5 id="推论dim-t_p-m">推论：dim <span class="math inline">\(T^*_p\)</span> = m</h5>
+<p>要证明这个结论，只要选定局部坐标系，证明一组自然坐标是余切空间线性无关的基底即可。读者自证不难。</p>
 <hr>
 <h3 id="子流形">子流形</h3>
 <hr>
@@ -589,19 +656,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Books</a>
+                <a href="javascript:void(0)" class="js-tag color4">Personal blog</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Books</a>
               </li>
              
               <li class="article-tag-list-item">
