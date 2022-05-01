@@ -351,8 +351,8 @@ F_p\)</span>的线性子空间。</p>
 <p><span class="math display">\[
 设[f]\in \mathcal F_p,对于容许坐标卡(U,\varphi_U)令:\\
 F(x^1,...,x^m)=f\circ \varphi_U^{-1}(x^1,...,x^m)\\
-那么[f]\in\mathcal H_p \iff\frac{\part F}{\part x^i}|_{\varphi_U(p)} =
-0\;\;,1\le i\le m
+那么[f]\in\mathcal H_p \iff\frac{\partial F}{\partial
+x^i}|_{\varphi_U(p)} = 0\;\;,1\le i\le m
 \]</span></p>
 <p>使用本地坐标表示，直接求导易证。</p>
 <p>这个定理表明，<span class="math inline">\(\mathcal H_p\)</span>
@@ -363,19 +363,19 @@ F(x^1,...,x^m)=f\circ \varphi_U^{-1}(x^1,...,x^m)\\
 <h5 id="定义1余切空间">定义1：余切空间</h5>
 <p><span class="math display">\[
 商空间\mathcal F_p/\mathcal
-H_p叫做M上p点的余切空间，记作T^*_p(或T^*_p(M))。\\\mathcal
+H_p叫做M上p点的余切空间,记作T^*_p(或T^*_p(M)).\\\mathcal
 H_p中的函数芽[f]的等价类被记作\tilde
-{[f]}(或(df)_p)，被称为M上p点的余切向量。
+{[f]}(或(df)_p),被称为M上p点的余切向量.
 \]</span></p>
 <p>容易看到，余切空间也是线性空间。</p>
 <p>我们已经离完整描述相当接近了，接下来给出链法则。</p>
 <h5 id="定理2链法则">定理2：链法则</h5>
 <p><span class="math display">\[
 设f^1,f^2,...,f^m\in
-C^\infin_p,F(y^1,...,y^m)是点f_p的邻域内的光滑函数，其中f_p =
+C^\infty_p,F(y^1,...,y^m)是点f_p的邻域内的光滑函数，其中f_p =
 (f^1(p),f^2(p),...,f^m(p)),\\
-那么f=F(f^1,f^2,...,f^m)\in \R^m，且(df)_p=\sum^m_{i=1}[(\frac{\part
-F}{\part f^i}(f^1(p),f^2(p),...,f^m(p)))\; \dot \;(df^i)_p]
+那么f=F(f^1,f^2,...,f^m)\in \R^m,且(df)_p=\sum^m_{i=1}[(\frac{\partial
+F}{\partial f^i}(f^1(p),f^2(p),...,f^m(p)))\; \dot \;(df^i)_p]
 \]</span></p>
 <p>证明较为直接，只要注意<span class="math inline">\((df)_p = (dg)_p
 \iff [f]-[g] \in \mathcal H_p\)</span>即可。</p>
