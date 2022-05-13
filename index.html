@@ -293,8 +293,7 @@ U(p)是p的邻域\)</span>,使得U同胚于<span class="math inline">\(\R^m\)</s
 <span class="math display">\[
 u^i = (\varphi_U(y))^i \;\;\;\;i=1,2,...,m
 \]</span> 其中的u，我们称为y的本地坐标或局部坐标。</p>
-<p>设<span class="math inline">\((U,\varphi_U),(V,\varphi_V)\)</span>​是两个坐标卡，如果U和V的交不空，那么<span class="math inline">\(\varphi_U(U\cap V)\)</span>​和<span class="math inline">\(\varphi_V(U\cap
-V)\)</span>​都是^m里的非空开集。映射$ _U_V^{-1} <span class="math inline">\(​就是定义在\)</span>_U(UV)<span class="math inline">\(​上，到\)</span>_V(UV)$​的函数，易见该函数是双射，设它为f，其反函数为g，那么
+<p>设<span class="math inline">\((U,\varphi_U),(V,\varphi_V)\)</span>​是两个坐标卡，如果U和V的交不空，那么<span class="math inline">\(\varphi_U(U\cap V)\)</span>​和<span class="math inline">\(\varphi_V(U\cap V)\)</span>​都是<span class="math inline">\(\R^m\)</span>里的非空开集。映射$ _U_V^{-1} <span class="math inline">\(​就是定义在\)</span>_U(UV)<span class="math inline">\(​上，到\)</span>_V(UV)$​的函数，易见该函数是双射，设它为f，其反函数为g，那么
 <span class="math display">\[
 y=f(x)\\
 x=g(y)
@@ -469,6 +468,71 @@ d(fg)_p = f(p)\dot\;(dg)_p+g(p)\dot\;(df)_p
 \]</span> 而且我们可以得出推论，余切空间是一个m维向量空间。</p>
 <h5 id="推论dim-t_p-m">推论：dim <span class="math inline">\(T^*_p\)</span> = m</h5>
 <p>要证明这个结论，只要选定局部坐标系，证明一组自然坐标是余切空间线性无关的基底即可。读者自证不难。</p>
+<p>定义了余切矢量和余切空间之后，我们注意到，上面定义的算符&lt;&lt;，&gt;&gt;的第一变元，即参数曲线，也可以进行与余切情形对偶的讨论。</p>
+<p>首先，根据定义<span class="math inline">\([f]-[g] \in \mathcal H_p
+\iff &lt;&lt;\gamma,[f]&gt;&gt; =
+&lt;&lt;\gamma,[g]&gt;&gt;\)</span>因而可以定义余切矢量在该算符下和它所代表的等价类中的一个相同：<span class="math inline">\(&lt;&lt;\gamma,(df)_p&gt;&gt;=&lt;&lt;\gamma,[f]&gt;&gt;\)</span>。</p>
+<p>然后，定义参数曲线的等价关系<span class="math inline">\(\sim in\;
+\Gamma_p\)</span>。假设<span class="math inline">\(\gamma,\gamma&#39;
+\in\Gamma_p\)</span>。那么<span class="math inline">\(\gamma
+\sim\gamma&#39;\iff\;\forall(df)_p\in
+T^*_p,&lt;&lt;\gamma,(df)_p&gt;&gt; =
+&lt;&lt;\gamma&#39;,(df)_p&gt;&gt;.\)</span></p>
+<p>显然这是个等价关系。记等价类为<span class="math inline">\([\gamma]\)</span>，那么我们可以定义<span class="math inline">\(&lt;[\gamma],(df)_p&gt;=&lt;&lt;\gamma,(df)_p&gt;&gt;\)</span>.我们将证明<span class="math inline">\(\gamma\)</span>的等价类恰可以构成余切空间的对偶空间。</p>
+<p>借用前面的记号，我们有 <span class="math display">\[
+&lt;[\gamma],(df)_p&gt;=\sum^m_{i=1}a_i\xi^i,in\;\;which\\
+a_i =(\frac{\part (f\circ \varphi^{-1}_U)}{\part
+u^i})_{\varphi_U(p)},\xi^i =(\frac{du^i}{dt})
+\]</span> 我们发现，这时<span class="math inline">\(a_i\)</span>不过是余切矢量<span class="math inline">\((df)_p\)</span>在自然基底<span class="math inline">\((du^i)_p\)</span>下的分量。显然<span class="math inline">\(&lt;[\gamma],(df)_p&gt;\)</span>是一个余切空间中的线性函数（想想内积），而且这个函数受<span class="math inline">\(\xi^i\)</span>唯一决定。那么我们可以选择<span class="math inline">\(\gamma\)</span>，使得<span class="math inline">\(u^i(t) = u^i(p)+\xi^it\)</span>。<span class="math inline">\(\xi^i\)</span>是任意的。可以看出来此时这个算符可以表达出来所有余切空间中的线性函数了。我们称这样的所有函数构成的空间为切空间，它的元素称为切矢量。它是余切空间的对偶空间。</p>
+<p>上面从分析的角度确定了切向量的表示，那么它到底有什么几何含义呢？其实这是相当清楚的，我们只要看到什么情况下参数曲线的等价类相等就好。根据我们上面的定义，因为<span class="math inline">\((df)_p\)</span>是任意的，所以如果<span class="math inline">\(\gamma,\gamma&#39;\in\Gamma_p\; is\; given
+\;by\;u^i = {u&#39;}^i(t),\;\;1\le i\le m\)</span>，那么 <span class="math display">\[
+[\gamma]=[\gamma&#39;]\iff(\frac{du^i}{dt})_{t=0}=(\frac{d{u&#39;}^i}{dt})_{t=0}
+\]</span>
+这个等式不过是说，所有在p点导数取得相同的值的曲线同属一个等价类，也就是说，一个切向量表示的是所有在p点具有相同切向量的曲线的集合。</p>
+<p>通过上面的一系列讨论我们可以对切空间和余切空间有一个基本的认识了，首先
+<span class="math display">\[
+&lt;X,(df)_p&gt;,\;\;\;X=[\gamma]\in T_p,(df)_p\in T^*_p
+\]</span> 是双线性的。</p>
+<p>我们这样选取参数曲线，使得<span class="math inline">\(u^i\circ
+\lambda_k = u^i(p)+\delta^i_kt\)</span>，那么显然<span class="math inline">\(&lt;[\lambda_k],(du^i)_p&gt;=\delta^i_k\)</span>，容易验证我们这样选取的<span class="math inline">\([\lambda_k]\)</span>就是基底ui的对偶基底。</p>
+<p>我们从另一个角度看这组基底，用一个任意的余切矢量试探，看二者会发生什么：
+<span class="math display">\[
+\begin{aligned}
+&lt;[\lambda_k],(df)_p&gt;=&amp;&lt;[\lambda_k],\sum^m_{i=1}(\frac{\part
+f}{\part u^i})_p \cdot (du^i)_p&gt;\\
+=&amp;(\frac{\part f}{\part u^k})_p
+\end{aligned}
+\]</span> 仍然记得这里的偏导数总是在局部坐标系下进行的，将<span class="math inline">\(f\circ \varphi^{-1}_U\)</span>记成了<span class="math inline">\(f\)</span>，所以是有意义的。这个等式直接给出了一个让我们熟悉的偏导数关系。我们认定，<span class="math inline">\([\lambda _k]\)</span>就是在函数芽<span class="math inline">\([f]\)</span>上的偏微分算符。两组基底之间的关系也可以重新写为
+<span class="math display">\[
+&lt;\frac{\part}{\part u^k}|_p,(df)_p&gt;=\delta^i_k
+\]</span>
+从这里开始，我们把余切空间的自然基底ui的对偶基底叫做切空间的自然基底，从我们定义的过程来看，任何一个位于切空间中的等价类<span class="math inline">\([\gamma]\)</span>都可以写成 <span class="math display">\[
+[\gamma]=\sum^m_{i=1}\xi^i\frac{\part}{\part u^i}|_p
+\]</span> 式中<span class="math inline">\(\xi^i\)</span>为切矢量的分量。根据基底关系，任何一个切矢量均由这样的分量唯一确定。两个切矢量的和以及数乘都可以看做是对于这样的分量的运算。</p>
+<p>从这里开始，我们在不引起混淆的情况下将省略表示该点 的下标p。</p>
+<p>下面我们要将切矢量和余切矢量和我们已有 的知识形式建立联系。</p>
+<h5 id="定义2微分">定义2：微分</h5>
+<p><span class="math display">\[
+设f是一个定义在点p附近的光滑函数.那么(df)_p\in
+T^*_p也被叫做f在p点的微分.如果(df)_p=0,那么p叫做f的一个临界点(Critical
+Point).
+\]</span></p>
+<p>函数的临界点一般包含着关于函数的很多信息，因而很值得研究。关于函数的临界点的研究有一个专门分支叫做Morse理论，有兴趣我会顺便讲一讲。</p>
+<h5 id="定义3方向导数">定义3：方向导数</h5>
+<p><span class="math display">\[
+设X\in T_p,f\in
+C^\infty_p.记Xf=&lt;X,(df)_p&gt;.Xf叫做f沿着向量X的方向导数.
+\]</span></p>
+<p>我们立刻可以得到一些关于方向导数的计算法则：</p>
+<h5 id="定理3方向导数的运算">定理3：方向导数的运算</h5>
+<p><span class="math display">\[
+X(\alpha f+\beta g)=\alpha \cdot Xf+\beta\cdot Xf\\
+X(fg)=f(p)\cdot Xg+g(p)\cdot Xf
+\]</span></p>
+<p>注：第一条性质就是线性性质，第二条性质就是所谓的积函数求导法则。这些结论都是自然的，取f=g=1，我们可以简单的看到，在常函数上应用方向导数得到0.</p>
+<p>注：在其它微分几何的教材中我们经常看到，以上两条性质常常被用来定义切矢量（而不是像我们从切矢量的另一部分导出）。这不过是从两个角度出发来探讨切矢量的性质。事实上，任何在p处光滑函数芽上满足这两条性质的函子形成余切空间的对偶空间，而且必然和切空间相同。</p>
+<p>接下来我们将讨论不同本地坐标下的基底变换（latex救我😭😭😭）。</p>
+<p>---待续---</p>
 <hr>
 <h3 id="子流形">子流形</h3>
 <hr>
@@ -1685,11 +1749,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Differential Geometry</a>
+                <a href="javascript:void(0)" class="js-tag color1">Books</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1697,11 +1757,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Books</a>
+                <a href="javascript:void(0)" class="js-tag color5">BUAAer‘s daily life</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Functions of Complex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Differential Geometry</a>
               </li>
              
               <li class="article-tag-list-item">
